@@ -282,7 +282,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-8" id="quote-info" style="margin-top:6em;">
+                <div class="col-lg-4 col-md-4 col-sm-8" id="quote-info2" style="margin-top:6em;">
                     <h1 class="font-me font-gray">RESUMEN</h1>
                     <p style="padding-left:2em;" class="font-rr">
                         <span id="rbrand"></span>
@@ -305,8 +305,8 @@
                         <br>
                         <span id="rtime"></span>
                     </p>
-                    <div id="quote-options">
-                        <button class="font-rl">Enviar Cotización por Email</button>
+                    <div id="quote-options2">
+                        <button class="font-rl" data-toggle="modal" data-target="#myModalNorm">Enviar Cotización por Email</button>
                         <br>
                         <button id="pay-table" class="font-rl">Tabla de Pagos</button>
                         <br>
@@ -318,6 +318,64 @@
                         </p>
                     </div>
                 </div>
+
+
+
+
+
+
+
+                <!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Cotización
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                      <input type="email" class="form-control"
+                      id="exampleInputEmail1" placeholder="Email"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Teléfono</label>
+                      <input type="number" class="form-control"
+                          id="exampleInputPassword1" placeholder="Teléfono"/>
+                  </div>
+                  <!-- <button type="submit" class="btn btn-default">Enviar</button> -->
+                </form>
+                
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 
