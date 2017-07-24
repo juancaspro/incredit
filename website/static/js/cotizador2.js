@@ -233,7 +233,6 @@ $(document).ready(function() {
         // 'margin-top':((width_option /3 )*-1)
     });
 
-
     // $('#option div.options-button>div').css({
     //     'padding-top': (((width_option / 3) * 2) - $('div.options-button >div').height()) / 2 + 'px'
     // });
