@@ -211,38 +211,118 @@ $(document).ready(function() {
     $('#times').hide();
 
 
-    // Prepare and adjust brands circle
-    var width_option = $('#option').width();
-    var scale_outside = (width_option * 30)/100; // aproximadamente 150 web
-
-    var scale_inside = (width_option * 18)/100; // aproximadamente 85 web
-    // var scale_inside = 145; // aproximadamente 85 web
-
-    // var scale_outside = 220;
-    $('#options').css({
-        'width': width_option - scale_outside+ 'px',
-        'height': width_option - scale_outside+ 'px'
-    });
-
-    $('#option div.options-button').css({
-        'width': ((width_option / 3) * 2) - scale_inside + 'px',
-        'height': ((width_option / 3) * 2) - scale_inside + 'px',
-        // 'margin': ((width_option / 3) * -1)  + 'px 0 0 ' + ((width_option / 3) * -1) + 'px'
-        // 'margin-top':((width_option /3 )*-1)
-    });
-
-
-    // $('#option div.options-button>div').css({
-    //     'padding-top': (((width_option / 3) * 2) - $('div.options-button >div').height()) / 2 + 'px'
+    // // Prepare and adjust package circle
+    // var width_option = $('#option').width();
+    // var scale_outside = (width_option * 30)/100; // aproximadamente 150 web
+    //
+    // var scale_inside = (width_option * 18)/100; // aproximadamente 85 web
+    // // var scale_inside = 145; // aproximadamente 85 web
+    //
+    // // var scale_outside = 220;
+    // $('#options').css({
+    //     'width': width_option - scale_outside+ 'px',
+    //     'height': width_option - scale_outside+ 'px'
+    // });
+    //
+    // $('#option div.options-button').css({
+    //     'width': ((width_option / 3) * 2) - scale_inside + 'px',
+    //     'height': ((width_option / 3) * 2) - scale_inside + 'px',
+    //     // 'margin': ((width_option / 3) * -1)  + 'px 0 0 ' + ((width_option / 3) * -1) + 'px'
+    //     // 'margin-top':((width_option /3 )*-1)
+    // });
+    //
+    //
+    // // $('#option div.options-button>div').css({
+    // //     'padding-top': (((width_option / 3) * 2) - $('div.options-button >div').height()) / 2 + 'px'
+    // // });
+    //
+    //
+    // $('#options .circle-item-back').css({
+    //     'width': ((width_option / 2) + 2) + 'px',
+    //     'height': ((width_option / 2) + 2) + 'px',
+    //     'margin-top': (((width_option / 2) + 2) * -1) + 'px',
+    //     'transform-origin': '0 ' + ((width_option / 2) + 2) + 'px',
     // });
 
 
-    $('#options .circle-item-back').css({
-        'width': ((width_option / 2) + 2) + 'px',
-        'height': ((width_option / 2) + 2) + 'px',
-        'margin-top': (((width_option / 2) + 2) * -1) + 'px',
-        'transform-origin': '0 ' + ((width_option / 2) + 2) + 'px',
-    });
+    // Variables circle options
+    // var options_items = 5;
+    // var options_deg = (360 * (Math.PI / 180)) / options_items;
+    // var options_radius = 110;
+    //
+    // // Prepare and adjust brands circle
+    // var width_option = $('#option').width();
+
+
+    // $('ul.circle#options').css({
+    //     'width': width_option + 'px',
+    //     'height': width_option + 'px'
+    // });
+
+    // $('#options div.circle-center').css({
+    //     'width': ((width_option / 3) * 2) + 'px',
+    //     'height': ((width_option / 3) * 2) + 'px',
+    //     'margin': ((width_option / 3) * -1) + 'px 0 0 ' + ((width_option / 3) * -1) + 'px'
+    // });
+
+    // $('#options div.circle-center>div').css({
+    //     'padding-top': (((width_option / 3) * 2) - $('div.circle-center>div').height()) / 2 + 'px'
+    // });
+
+
+    // $('#options .circle-item-back').css({
+    //     'width': ((width_option / 2) + 2) + 'px',
+    //     'height': ((width_option / 2) + 2) + 'px',
+    //     'margin-top': (((width_option / 2) + 2) * -1) + 'px',
+    //     'transform-origin': '0 ' + ((width_option / 2) + 2) + 'px',
+    // });
+
+    // for(i = 2; i < (options_items + 2); i++){
+    //     let calc = ((options_deg * (i - 1)) - options_deg - (90 * (Math.PI / 180)));
+    //     let calc2 = (((options_deg * (i - 1)) - (options_deg / 2) - (90 * (Math.PI / 180))) * (180 / Math.PI));
+    //     let calc3 = ((((90 * (Math.PI / 180)) - options_deg) *  (180 / Math.PI)) * -1)
+    //     let flag_top = 0;
+    //
+    //     // $('#option.circle-item:nth-child(' + i + ')').css({
+    //     //     'display': 'block'
+    //     // });
+    //
+    //     // if(options_items == 2){
+    //     //     $('#circle-brands .circle-item:nth-child(' + i + ') .circle-item-back').css({
+    //     //         'width': ((width_brands / 6) * 3.5) + 'px',
+    //     //         'height': ((width_brands / 6) * 3.5) + 'px',
+    //     //         'transform': 'rotate(' + calc2 + 'deg) translate(-50%, -50%)'
+    //     //     });
+    //     // }else{
+    //
+    //
+    //     // $('#option .circle-item:nth-child(' + i + ') .circle-item-back').css({
+    //     //     'transform': 'rotate(' + calc2 + 'deg) skew(' + calc3 + 'deg)'
+    //     // });
+    //
+    //
+    //     // if(calc2 >= 90 && calc2 <= 180){
+    //     //     $('#option .circle-item:nth-child(' + i + ') .circle-item-back div').css({
+    //     //         'transform': 'skew(1deg) rotate(225deg) scale(1)'
+    //     //     });
+    //     //     flag_top = 40;
+    //     // }
+    //     // }
+    //
+    //
+    //     // $('#option .circle-item:nth-child(' + i + '):before').css({
+    //     //     'margin': (Math.cos(calc) * options_radius).toFixed() + 'px 0 0 ' + (Math.sin(calc) * options_radius).toFixed() + 'px'
+    //     // });
+    //
+    //     width_span = $('#options .circle-item-text #span-text-' + (i-1) + '').width();
+    //     console.log(width_span);
+    //     // $('#options .circle-item-text #span-text-' + (i-1) + '').css({
+    //     //     'margin-top': ((width_option / 4) - $('#options #span-text-' + (i-1) + '').height() + flag_top) + 'px',
+    //     //     'margin-left': (((width_option / 2) - width_span) / 2) + 'px',
+    //     // });
+    // }
+
+
 
 
 
@@ -294,7 +374,7 @@ $(document).ready(function() {
                     $(this).on("click", function(){
 
                         if (isResponsive()) {
-                            $( "#mySidenav" ).show();
+                            $( "#mySidenav").show();
                             openNav();
                         }
 
