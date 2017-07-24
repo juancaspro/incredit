@@ -47,7 +47,9 @@ function getObject(objects, pk){
 
 function formatAmort(items){
     for(i = 0; i < items.length; i++){
+        // console.log(items[i]);
         for(j = 0; j < items[i].length; j++){
+            // console.log(items[i][j])
             if(j != 0){
                 items[i][j] = items[i][j].toFixed(2);
             }
@@ -208,6 +210,7 @@ $(document).ready(function() {
     $('#people').hide();
     $('#hitch').hide();
     $('#times').hide();
+    $('#quote-options').hide();
 
 
     // Prepare and adjust brands circle
@@ -585,21 +588,54 @@ $(document).ready(function() {
         let comision = (monto_financiar * 0.01) * 1.16;
         var cuota = getValorDeCuotaFija(monto_financiar, parseFloat(15.49), parseInt(time), type_person);
         var items = getAmortizacion(monto_financiar, parseFloat(15.49), parseInt(time), cuota, type_person);
-        console.log(items);
+        // console.log(items);
         console.log(cuota);
         $('#quote').html(`
             <p class="font-rr" style="padding-top:2.2em;">Comisión por apertura</p>
-                        <h1 id="ccomision" class="font-rr font-blue">`+comision+`</h1>
-                        <p class="font-rr" style="padding-top:1em;">Monto a financiar</p>
-                        <h1 id="cmonto" class="font-rr font-blue">`+monto_financiar+`</h1>
-                        <p class="font-rr" style="padding-top:1em;">Pago inicial</p>
-                        <h1 id="cinicial" class="font-rr font-blue">`+(comision + (package_price * (hitch / 100)))+`</h1>
-                        <p class="font-rr" style="padding-top:1em;">Pago mensual</p>
-                        <h1 id="ccuota" class="font-rr font-blue">`+cuota.toFixed(2)+`</h1>
+            <h1 id="ccomision" class="font-rr font-blue">`+comision+`</h1>
+            <p class="font-rr" style="padding-top:1em;">Monto a financiar</p>
+            <h1 id="cmonto" class="font-rr font-blue">`+monto_financiar+`</h1>
+            <p class="font-rr" style="padding-top:1em;">Pago inicial</p>
+            <h1 id="cinicial" class="font-rr font-blue">`+(comision + (package_price * (hitch / 100)))+`</h1>
+            <p class="font-rr" style="padding-top:1em;">Pago mensual</p>
+            <h1 id="ccuota" class="font-rr font-blue">`+cuota.toFixed(2)+`</h1>
         `);
+        $('#quote-options').show();
         $('#ccomision').formatCurrency();
         $('#cmonto').formatCurrency();
         $('#cinicial').formatCurrency();
         $('#ccuota').formatCurrency();
+        items2 = items
+        for(i = 0; i < items2.length; i++){
+            // console.log(items[i]);
+            for(j = 0; j < items2[i].length; j++){
+                // console.log(items[i][j])
+                if(j != 0){
+                    items2[i][j] = items2[i][j].toFixed(2);
+                }
+            }
+        }
+        $('#pay-table').click(function(){
+            console.log(items2);
+            window.open('/generate_table/?data=' + JSON.stringify(items2), '_blank'); 
+        });
+        $('#print-table').click(function(){
+            // items2 = items
+            // for(i = 0; i < items2.length; i++){
+            //     // console.log(items[i]);
+            //     for(j = 0; j < items2[i].length; j++){
+            //         // console.log(items[i][j])
+            //         if(j != 0){
+            //             items2[i][j] = items2[i][j].toFixed(2);
+            //         }
+            //     }
+            // }
+            console.log(items2);
+            window.open('/generate_pdf/?data=' + JSON.stringify(items2), '_blank'); 
+        });
     });
+
+    // $('#pay-table').click(function(){
+    // });
+    
 });

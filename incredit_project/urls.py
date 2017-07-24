@@ -5,7 +5,8 @@ from website.views import (home, notice, une,
                            collection, quote,
                            quote_dev, buro,
                            documentation, quote2,
-                           moment_a, moment_c)
+                           moment_a, moment_c,
+                           generate_table, generate_pdf)
 from quotient.views import (get_cars, get_plan)
 
 urlpatterns = [
@@ -23,4 +24,6 @@ urlpatterns = [
     url(r'^cmoment/$', moment_c),
     url(r'^cars/brand_id/(\d+)/$', get_cars),
     url(r'^plans/$', get_plan),
+    url(r'^generate_table/', generate_table),
+    url(r'^generate_pdf/', generate_pdf),
 ]

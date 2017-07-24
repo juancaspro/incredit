@@ -287,12 +287,47 @@
 
             </div>
 
-
+                <div class="col-lg-4 col-md-4 col-sm-8" id="quote-info2" style="margin-top:6em;">
+                    <h1 class="font-me font-gray">RESUMEN</h1>
+                    <p style="padding-left:2em;" class="font-rr">
+                        <span id="rbrand"></span>
+                        <br>
+                        <span id="rmodel"></span>
+                        <br>
+                        <span id="ryear"></span>
+                        <br>
+                        <span id="rprice"></span>
+                        <br>
+                        <span id="rhitch"></span>
+                        <br>
+                        <span id="rproduct"></span>
+                        <br>
+                        <span id="rpeople"></span>
+                        <br>
+                        Plan IN Credit
+                        <br>
+                        Paquete <span id="rpackage"></span>
+                        <br>
+                        <span id="rtime"></span>
+                    </p>
+                    <div id="quote-options2">
+                        <button class="font-rl" data-toggle="modal" data-target="#myModalNorm">Enviar Cotización por Email</button>
+                        <br>
+                        <button id="pay-table" class="font-rl">Tabla de Pagos</button>
+                        <br>
+                        <button id="print-table" class="font-rl">Imprimir Cotización</button>
+                        <p class="font-rr font-gray" style="padding-top:2em; padding-bottom:2em; text-align:justify;">
+                            Información sujeta a cambios. Aplican restrincciones. La cotización no incluye el seguro seguro del vehiculo.
+                            <br><br>
+                            El Crédito Automotriz y el Arrendamiento Puro, puede implicar la contratación de productos o servicios adicionales; para mayor información visita a tu Distribuidor.
+                        </p>
+                    </div>
             <div class="col-lg-offset-2 col-lg-6 col-md-6 col-sm-8" id="quote-circle" style="margin-top:6em;">
                 <div style="text-align:center; " id="quote">
                     <center>
                         <h1 id="cotizar" style="padding-top: 180px;cursor: pointer">COTIZAR</h1>
                     </center>
+
                 </div>
             </div>
 
@@ -326,9 +361,68 @@
 
 
 
-
-
+                <!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Cotización
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                      <input type="email" class="form-control"
+                      id="exampleInputEmail1" placeholder="Email"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Teléfono</label>
+                      <input type="number" class="form-control"
+                          id="exampleInputPassword1" placeholder="Teléfono"/>
+                  </div>
+                  <!-- <button type="submit" class="btn btn-default">Enviar</button> -->
+                </form>
+                
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Enviar
+                </button>
+            </div>
         </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
 
 
         <div class="row">

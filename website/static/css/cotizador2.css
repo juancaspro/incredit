@@ -448,7 +448,11 @@
     border: 3em solid #BDBEC0;
 }
 
-
+#quote-options button{
+  color: #FFF;
+  border-radius: 5px;
+  margin-left: 2.5em;
+}
 
 
 
