@@ -189,6 +189,7 @@ $(document).ready(function() {
         $("#step1").addClass('complete');
         $("#step2").removeClass('disabled');
         $("#step2").addClass('active');
+        $("#step3").removeClass('active');
     });
 
     // Adjust quote circle
