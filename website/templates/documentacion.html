@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Incredit website">
+        <meta name="author" content="Carlos Salgado">
+
+        <title>IN-CREDIT DOCUMENTACIÓN</title>
+
+        {% load static %}
+        <!-- Bootstrap CSS -->
+        <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+        <!-- Custom styles -->
+        <link href="{% static "css/style.css" %}" rel="stylesheet">
+    </head>
+    <body class="body-cotizador">
+        <div class="cotizador">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="/"><button class="font-rr font-white">Inicio</button></a>
+                    </div>
+                </div>
+                <div class="row" style="padding-top:5em;">
+                    <div class="col-lg-offset-0 col-lg-4 col-sm-offset-4 col-sm-4 col-xs-offset-4 col-xs-4">
+                        <img src="{% static "img/logo.png" %}" class="logo">
+                    </div>
+                    <div class="col-lg-offset-0 col-lg-8 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+                        <p class="font-rr font-white title">EN CONSTRUCCIÓN</p>
+                        <p class="font-rr font-white text">
+                            Lamentamos el inconveniente, estamos trabajando para ofrecerte una mejor experiencia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

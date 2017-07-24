@@ -1,0 +1,77 @@
+{% extends "admin/base.html" %}
+
+{% block title %} Admin | INCREDIT {% endblock %}
+
+{% block extrastyle %}
+<style>
+    #header{
+        background: #0d406e;
+        color: #FFF;
+    }
+
+    .button, input[type=submit], input[type=button], .submit-row input, a.button {
+        background: #0d406e;
+    }
+
+    input[type=submit]:hover, input[type=button]:hover {
+        background: #486E8F;
+    }
+
+    #branding h1, #branding h1 a:link, #branding h1 a:visited {
+        color: #FFF;
+        font-weight: 200;
+        letter-spacing: 1px;
+    }
+
+    .module h2, .module caption, .inline-group h2 {
+        font-weight: 300;
+        background: #0d406e;
+        color: #fff;
+    }
+
+    a:link, a:visited {
+        color: #818180;
+    }
+
+    div.breadcrumbs {
+        background: #6295C2;
+    }
+
+    .button, input[name=_save]{
+        background: #0DB654 !important;
+    }
+
+    .button, input[name=_addanother]{
+        background: #6295C2 !important;
+    }
+
+    .button, input[name=_continue]{
+        background: #6295C2 !important;
+    }
+
+    #changelist .actions .button {
+        background: #fff !important;
+    }
+    
+
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">INCREDIT</a></h1>
+{% endblock %}
+
+{% block userlinks %}
+    <!--{% if user.is_active and user.is_staff %}
+        {% url 'django-admindocs-docroot' as docsroot %}
+        {% if docsroot %}
+            <a href="{{ docsroot }}">'Documentation'</a> /
+        {% endif %}
+    {% endif %}-->
+    {% if user.has_usable_password %}
+    <a href="{% url 'admin:password_change' %}">CAMBIAR CONTRASEÑA</a> /
+    {% endif %}
+    <a href="{% url 'admin:logout' %}">CERRAR SESIÓN</a>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

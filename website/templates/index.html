@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Incredit website">
+    <meta name="author" content="Carlos Salgado">
+    <!--<link rel="icon" href="">-->
+
+    <title>Incredit Site</title>
+
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/sweetalert.css" %}" rel="stylesheet">
+    
+    <script src="{% static "js/sweetalert.min.js" %}"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+
+  <body>
+
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top menu-incredit">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                  <img class="logo-menu" src="{% static "img/logo.png" %}">
+              </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+             <ul class="nav navbar-nav navbar-right font-mb font-nav">
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="http://produccion.anfexi.com/Incredit/SAC/" target="_blank">Distribuidores</a></li>
+                <li><a href="http://produccion.anfexi.com/Incredit/PortalCliente/Account/Log/In" target="_blank">Clientes</a></li>
+                <li><a href="/cotizador2/">Cotizador</a></li>
+                <li><a href="#financiamiento">Productos</a></li>
+            </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- HOME -->
+    <div class="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="font-me font-white title">ESTRENE HOY</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="font-rr font-blue subtitle">Si de beneficios se trata IN C&L® es su opción</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /HOME -->
+
+    <!-- NOSOTROS -->
+    <div class="us" id="nosotros">
+        <div class="container back-us">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                    <p class="font-mb font-blue title">NOSOTROS</p>
+                </div>
+                <div class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4 hidden-xs hidden-sm">
+                    <img src="{% static "img/engines.png" %}" width="60%" height="auto">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 div-text">
+                    <p class="font-mr font-white subtitle">¿Quiénes somos?</p>
+                    <p class="font-rr font-white" style="font-size:1em; text-align:justify;">IN C&L® es una empresa especializada en el Crédito Automotriz y Arrendamiento Puro, con productos y servicios de calidad y altamente competitivos, enfocados al mercado mexicano.</p>
+                    <p class="font-rr font-white" style="font-size:1em; text-align:justify;">Nuestro compromiso es usted, por eso desarrollamos productos y servicios con un valor agregado que se adecuen a la demanda más exigente y puntual buscando su satisfacción total con un servicio personalizado.</p>
+                    <p class="font-rr font-white" style="font-size:1em; text-align:justify;">En IN Credit & Leasing® obtendrá de forma rápida y sencilla su crédito o arrendamiento automotriz con el que podrá estrenar el vehículo de su preferencia.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:2em;">
+                <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
+                    <p class="font-rr font-white" style="font-size:1em; text-align:justify;">
+                        IN Credit & Leasing, de conformidad con lo establecido en el artículo 87-J de la Ley General de Organizaciones y Actividades Auxiliares del Crédito, para su constitución y operación como sociedad financiera de objeto múltiple, así como para llevar a cabo operaciones de crédito, arrendamiento financiero y factoraje financiero con tal carácter, NO requiere de autorización de la Secretaría de Hacienda y Crédito Público, sin embargo se encuentra sujeta a la supervisión de la Comisión Nacional Bancaria y de Valores, únicamente para efectos de lo dispuesto en el Artículo 56 de dicha Ley.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /NOSOTROS -->
+
+    <!-- VISION -->
+    <div class="vision">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-6 col-sm-offset-1 col-sm-10">
+                    <p class="font-me font-blue2 title">MISIÓN</p>
+                    <p class="font-rr font-gray text">Ofrecer productos financieros satisfaciendo las necesidades de nuestros clientes, a través de un servicio personalizado, alta calidad, precios competitivos contribuyendo al crecimiento y desarrollo de nuestros clientes.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:2em;">
+                <div class="col-lg-offset-4 col-lg-7 col-sm-offset-1 col-sm-10">
+                    <p class="font-me font-blue2 title2">VISIÓN</p>
+                    <p class="font-rr font-gray text2">Ser el apoyo financiero en el mercado, otorgando satisfacción a nuestros clientes y garantizando la calidad de nuestro servicio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /VISION -->
+
+    <!-- FINANCIAMIENTO -->
+    <!--<div class="financiamiento" id="financiamiento">
+        <div class="container header">
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-8 col-xs-offset-1 col-xs-10">
+                    <p class="font-me font-white title">CRÉDITO AUTOMOTRIZ</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+                    <p class="font-mr subtitle">¿Qué es el Crédito Automotriz?</p>
+                    <p class="font-rr text">Es el crédito para la adquisición de vehículos nuevos y seminuevos, nuestro producto está diseñado para darte felicidad y rapidez para obtener un crédito.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+                    <p class="font-mr subtitle" style="text-align:right;">¿A quién está dirigido?</p>
+                    <p class="font-rr text" style="text-align:right;">Enfocado a personas físicas, personas físicas con actividad empresarial y personas morales.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+                    <p class="font-mr subtitle">Oferta Comercial Crédito Automotriz: </p>
+                    <ul>
+                        <li class="font-rr text">De 0% - 1% Comisión por Apertura, dicha comisión se encuentra disponibles para consulta del Usuario, en el Portal de Registro de Comisiones de la Condusef.</li>
+                        <li class="font-rr text">Tasa Anual Fija 14.89%</li>
+                        <li class="font-rr text">Enganche desde el 15%</li>
+                        <li class="font-rr text-cat">CAT (Costo Anual Total) “Sin IVA Para fines informativos y de comparación” del 17.54%</li>
+                        <li class="font-rr text">Plazos desde 12 a 60 meses</li>
+                        <li class="font-rr text">Seguro multianual contado y multianual financiado**</li>
+                        <li class="font-rr text">Opciones de seguro gratis emitido por el fabricante</li>
+                        <li class="font-rr text">Crédito con pagos especiales programados opcionales</li>
+                        <li class="font-rr text">Aportaciones a capital y terminación anticipada sin penalización alguna</li>
+                        <li class="font-rr text">Pago mensual domiciliado</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+                    <p class="font-mr subtitle">Oferta Comercial Crédito Automotriz Seminuevos Multimarca: </p>
+                    <ul>
+                        <li class="font-rr text">Crédito para vehículos seminuevos de cualquier marca modelos 2013 en adelante</li>
+                        <li class="font-rr text">De 0% - 1% de Comisión por Apertura, dicha comisión se encuentra disponibles para consulta del Usuario, en el Portal de Registro de Comisiones de la Condusef.</li>
+                        <li class="font-rr text">Enganche desde el 20%</li>
+                        <li class="font-rr text">Tasa Anual  Fija de 15.50%</li>
+                        <li class="font-rr text-cat">CAT (Costo Anual Total) “Sin IVA Para fines informativos y de comparación” del 17.54%</li>
+                        <li class="font-rr text">Plazos de 12 a 48 meses</li>
+                        <li class="font-rr text">Seguro multianual contado y multianual financiado**</li>
+                        <li class="font-rr text">Pago mensual domiciliado</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+                    <p class="font-me subtitle-leg">Legales: </p>
+                    <p class="font-rr text-leg">*Tasas sin IVA, para fines informativos, sujeto a vigencia y disponibilidad. Crédito, tasa fija y comisiones expresadas en Moneda Nacional, aplica para todo el territorio nacional.</p>
+                    <p class="font-rr text-leg">** El vehículo a financiar debe estar asegurado contra cualquier daño y con una cobertura que baste a cubrir el valor del crédito otorgado. Puede ser con la compañía aseguradora de tu preferencia y por el total del plazo del crédito (la póliza del seguro deberá contar con el endoso preferente en favor de SU SERVICIO FINANCIERO, S.A. DE C.V. SOFOM E.N.R. a fin de garantizar el crédito. Sujeto a cambios. Importes sólo informativos, sujeto a vigencia y disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- /FINANCIAMIENTO -->
+
+    <!--<div class="productos" id="arrendamiento">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8" id="div-arrendamiento">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <p class="font-me font-white title">ARRENDAMIENTO PURO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" id="div-financiamiento">
+                    
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="productos" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 move" id="arrendamiento">
+                    <div id="out">
+                        <h4 class="font-me font-white title">ARRENDAMIENTO<br>PURO</h4>
+                    </div>
+                    <div id="active">
+                        <h1 class="font-me font-white title">ARRENDAMIENTO<br>PURO</h1>
+                        <div id="initial-info" style="padding-right:4em;">
+                            <h3 class="font-mr font-white subtitle">¿Qué es el Arrendamiento Puro?</h3>
+                            <p class="font-rr font-white">El arrendamiento o leasing es un contrato mediante el cual, el arrendador traspasa el derecho a usar un bien a cambio del pago de rentas durante un plazo determinado.</p>
+
+                            <p class="font-rr font-white">Con nuestro producto de arrendamiento puro puedes obtener excelentes beneficios fiscales, con una mínima inversión mediante rentas mensuales fijas haciendo uso y goce de cualquier vehículo nuevo.</p>
+                            <h3 class="font-mr font-white subtitle">¿A quién está dirigido?</h3>
+                            <p class="font-rr font-white">Enfocado a Personas Físicas con Actividad Empresarial y Personas Morales</p>
+                        </div>
+                        <div id="more-info" style="padding-right:4em;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3 class="font-mr font-white subtitle">Oferta Comercial</h3>
+                                    <ul class="font-rr font-white">
+                                        <li>De 0% hasta 2.5% Comisión por apertura sobre la base de cálculo</li>
+                                        <li>Inversión inicial mínima</li>
+                                        <li>Renta fija mensual</li>
+                                        <li>Beneficios fiscales</li>
+                                        <li>Plazos de renta a 12 hasta 48 meses</li>
+                                        <li>Seguro incluido en la renta y multianual contado</li>
+                                        <li>Posibilidad de arrendar accesorios, servicios de mantenimiento, etc.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="font-mr font-white subtitle">Beneficios</h3>
+                                    <ul class="font-rr font-white">
+                                        <li><b>Fiscales</b></li>
+                                        <li>Rentas deducibles de impuestos</li>
+                                        <li>Deducibilidad inmediata</li>
+                                        <li>Se reduce la carga fiscal</li>
+                                    </ul>
+                                    <ul class="font-rr font-white">
+                                        <li><b>Financieras</b></li>
+                                        <li>Se arrenda 100% del tangible</li>
+                                        <li>Felxibilidad en plazos, se adecua a su capacidad financiera</li>
+                                        <li>Evita la descapitalización</li>
+                                        
+                                    </ul>
+                                    <ul class="font-rr font-white">
+                                        <li><b>Administrativas</b></li>
+                                        <li>Registro contable siempre (Rentas directo o a gastos)</li>
+                                        <li>Renovación tecnológica, cada 3 o 4 años cambie sus flotillas mejorando la imagen de sus negocio</li>
+                                        <li>Disminuye gastos de mantenimiento en bienes de capital obsoletos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="faqs" style="padding-right:4em;">
+                            <h3 class="font-mr font-white subtitle">¿Cómo accesar al Portal de clientes? / Acceso a Portal de clientes</h3>
+                            <p class="font-rr font-white">1.- Ingrese a nuestra página de Internet: www.in-credit.com.mx  y de clic en Clientes, se encuentra en la parte superior derecha.</p>
+                            <p class="font-rr font-white">2.- De clic en el ícono de Registrar  e ingrese  el correo electrónico que nos señaló en su solicitud de crédito para que reciba un correo con las instrucciones para concluir su alta. Con ello, usted podrá crear su contraseña e ingresar cada vez que lo requiera.</p>
+                            <p class="font-rr font-white"><a href="{% static "docs/registro_rapido.pdf" %}" target="_blank">DESCARGAR GUÍA RÁPIDA DE REGISTRO</a></p>
+                            <p class="font-rr font-white">Si desea cambiar de cuenta de correo electrónico o no recuerda el correo electrónico que nos proporcionó, favor enviar un correo electrónico a: <a href="mailto:servicioacliente@in-credit.com.mx" target="_top">servicioaclientes@in-credit.com.mx</a> </p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo puedo obtener mis facturas o Estados de Cuenta / Estados de Cuenta y Facturación?</h3>
+                            <p class="font-rr font-white">1.- Ingrese a nuestra página de internet:  www.in-credit.com.mx  y de clic en Clientes, se encuentra en la parte superior derecha.</p>
+                            <p class="font-rr font-white">2.- Escriba su correo electrónico y contraseña y de clic en entrar. Para mayor información consulte la pregunta 4. ¿Cómo puedo ingresar al Portal de  Servicio a Clientes?</p>
+                            <p class="font-rr font-white">3.- Al ingresar, debajo de la sección: Resumen Online de Actividades, encontrará el apartado para poder descargar sus Estados de Cuenta y Facturas, sólo tendrá que dar clic en la fecha de su preferencia y podrá visualizar ambos documentos</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Dónde puedo solicitar actualización de datos? / Actualización de datos?</h3>
+                            <p class="font-rr font-white">Si durante la vida de su contrato realiza algún cambio de domicilio, teléfono, correo electrónico, etc., favor de notificarlo a nuestro Centro de Atención a Clientes para mantener su información actualizada.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo liberar una unidad arrendada de un depósito vehicular (corralón)? / Liberación de unidades de depósitos vehiculares</h3>
+                            <p class="font-rr font-white">Deberá realizar el trámite correspondiente a su localidad, presentado la documentación que le requieran las autoridades y pagar el tiempo de estadía, servicio de grúa, costo de traslado y/o multa. </p>
+                            <p class="font-rr font-white">En caso de que requiera la acreditación de la propiedad, a través de un represente de IN C&L®, deberá solicitarlo vía correo electrónico a <a href="mailto:leasing@in-credit.com.mx" target="_top">leasing@in-credit.com.mx</a>  confirmando el motivo de detención de la unidad y en qué instancia se encuentra, con la finalidad de que se coordinemos el proceso.</p>
+
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo pagar infracciones y/o multas? / Infracciones y multas</h3>
+                            <p class="font-rr font-white">De acuerdo al contrato es obligación del arrendatario realizar todos los gastos por conceptos de infracciones, multas y cualesquiera otros gastos en que incurra por el uso del vehículo. Por ello, deberá pagarla ante las autoridades correspondientes de su localidad de manera inmediata.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo o quién paga las Tenencias, derechos de refrendo y/u otros impuestos vehiculares de la unidad arrendada? / Tenencias, derechos de refrendo y/u otros impuestos</h3>
+                            <p class="font-rr font-white">De acuerdo al contrato, se establece que es obligación del arrendatario pagar todos los impuestos y/o derechos que se causen por el uso del vehículo, tales como tenencia, derechos de refrendo y/o cualquier otro que las leyes aplicables contemplen actualmente y/o en el futuro durante la vigencia del Contrato. </p>
+                            <p class="font-rr font-white">Deberá también entregar el comprobante y/o constancia del pago correspondiente a <a href="mailto:leasing@in-credit.com.mx" target="_top">leasing@in-credit.com.mx</a></p>
+
+
+                            <h3 class="font-mr font-white subtitle">Terminación del contrato</h3>
+
+                            <p class="font-rr font-white">1. Deberá restituir cada Vehículo en el domicilio de la Agencia Distribuidora que se indica en el punto II del ANEXO LETRA “A” de su Contrato, junto con toda su documentación al corriente (tenencias, placas, calcomanías, control de contaminación vehicular, etc.).</p>
+                            <p class="font-rr font-white">2. Dar de baja las placas de la unidad si estuvieran a nombre de la Arrendadora.</p>
+                            <p class="font-rr font-white">3. Debe firmar el Recibo de Devolución de la unidad correspondiente, ya que dicho recibo es el documento oficial que da por terminado el periodo del arrendamiento, y dar de baja las placas de la unidad si estuvieran a nombre de la Arrendadora.</p>
+                            <p class="font-rr font-white">4. En caso de que esté interesado en la unidad, será su Distribuidor quien le informe el precio de la misma.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Qué requiero para solicitar una terminación anticipada?</h3>
+
+                            <p class="font-rr font-white">1. Estar al corriente de sus pagos y obligaciones respecto a las rentas y a los impuestos y/o multas de la unidad arrendada.</p>
+                            <p class="font-rr font-white">2. Enviarnos un correo a servicioaclientes@in-credit.com.mx  requiriéndolo con un mes de anticipación.</p>
+                            <p class="font-rr font-white">3. Obtener la autorización de IN C&L® y pagar por concepto de pena convencional, la cantidad señalada en el punto IV inciso H) del apartado de condiciones de su contrato ANEXO A. </p>
+                            <p class="font-rr font-white">4. Realizar la devolución correspondiente de la unidad, acudiendo con su Distribuidor (que se indica en el punto II del ANEXO A de su Contrato) para firmar el Recibo de Devolución de la unidad (ya que dicho recibo es el documento oficial que da por terminado el periodo del arrendamiento) y en caso de desear su compra, obtenga el precio de la misma (Valor Residual).</p>
+                        </div>
+                        <div class="bottom" id="bottom">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <h3 class="font-me font-white faq">FAQ</h3>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <p class="font-rr font-white info2" id="marrendamiento"><a href="/amoment/">Vida de un Contrato de Arrendamiento Puro</a></p>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <p class="font-rr font-white info">+ Más información</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="{% static "img/logo.png" %}" alt="" style="width: 50px; height: auto; position: absolute; z-index: 1; margin-left: -2em; margin-top: 28em;">
+                </div>
+
+                <div class="col-md-3 move" id="financiamiento">
+                    <div id="out">
+                        <h4 class="font-me font-white title">CRÉDITO<br>AUTOMOTRIZ</h4>
+                    </div>
+                    <div id="active">
+                        <h1 class="font-me font-white title">CRÉDITO<br>AUTOMOTRIZ</h1>
+                        <div id="initial-info" style="padding-left:4em;">
+                            <h3 class="font-mr font-white subtitle">¿Qué es el crédito Automotriz?</h3>
+                            <p class="font-rr font-white">Es el crédito para la adquisición de vehículos nuevos y seminuevos, nuestro producto está diseñado para darte facilidad y rapidez para obtenerlo.</p>
+                            
+                            <h3 class="font-mr font-white subtitle">¿A quién está dirigido?</h3>
+                            <p class="font-rr font-white">Crédito Autos Nuevos: Enfocado a Personas Físicas, Personas Físicas con Actividad Empresarial y Personas Morales.</p>
+                            <p class="font-rr font-white">Crédito Autos Seminuevos: Enfocado a Personas Físicas, Personas Físicas con Actividad Empresarial y Personas Morales</p>
+                        </div>
+                        <div id="more-info" style="padding-left:4em; text-align:left;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3 class="font-mr font-white subtitle">Oferta Comercial</h3>
+                                    <ul class="font-rr font-white" style="text-align:left;">
+                                        <li><b>De 0% hasta 2.5% Comisión por Apertura, dicha comisión se encuentra disponible para consulta del usuario, en el <u><a href="https://phpapps.condusef.gob.mx/reco/index.php">Portal de Registro de Comisiones de la Condusef</a></b></u></li>
+                                        <li><b>Comisión por gastos de cobranzas de $500 más IVA por evento de incumplimiento de pago mensual, dicha comisión se encuentra disponible para consulta del Usuario el <u><a href="https://phpapps.condusef.gob.mx/reco/index.php">Portal de Registro de Comisiones de la Condusef</a></b></u></li>
+                                        <li>Tasa Fija Anual 15.99%</li>
+                                        <li>Enganche desde el 15%+-</li>
+                                        <li>Plazos desde 12 hasta 60 meses</li>
+                                        <li>Seguro multianual contado y multianual financiado**</li>
+                                        <li>Opciones de seguro gratis emitido por el fabricante</li>
+                                        <li>Financiamiento con pagos especiales programados opcionales</li>
+                                        <li>Pago mensual domiciliado</li>
+                                    </ul>
+
+                                     <p class="font-rr font-white"><b><u><span style="font-size: 18px;">El Costo Anual Total (vigente) promedio para PLAN IN CREDIT es del 18.05%</span></u></b>, calculado al 29 de mayo del 2017. Para fines informativos y de comparación, sobre un monto a financiar de $200,000.00 M.N. con un enganche del 15%, con una tasa de interés del 15.99% a un plazo de 48 meses. Tasas sin IVA. Sujeto a cambios sin previo aviso. Importes sólo informativos, sujeto a vigencia y disponibilidad.</p>
+
+                                    <h3 class="font-mr font-white subtitle">Oferta Comercial Crédito Automotriz Seminuevos Multimarca</h3>
+                                    <ul class="font-rr font-white" style="text-align:left;">
+                                        <li>Crédito para vehículos seminuevos de cualquier marca modelos 2013 en adelante</li>
+                                        
+                                        <li>Comisión por gastos de cobranzas de $500 más IVA por evento de incumplimiento de pago mensual, dicha comisión se encuentra disponible para consulta del Usuario el <b><a href="https://phpapps.condusef.gob.mx/reco/index.php">Portal de Registro de Comisiones de la Condusef</a></b></li>
+                                        <li>De 0% hasta 2.5% Comisión por Apertura, dicha comisión se encuentra disponible para consulta del usuario, en el <b><a href="https://phpapps.condusef.gob.mx/reco/index.php">Portal de Registro de Comisiones de la Condusef</a></b></li>
+                                        
+                                        <li>De 0% hasta el 2.5% de Comisión por Apertura</li>
+                                        <li>Tasa Fija Anual del 16.10%</li>
+                                        <li>Plazos de 12 a 48 meses</li>
+                                        <li>Seguro multianual contado y multianual financiado**</li>
+                                        <li>Pago mensual domiciliado</li>
+                                        <li>Enganche desde el 20%</li>
+                                    </ul>
+
+                                     <p class="font-rr font-white"><b><u><span style="font-size: 18px;">El Costo Anual Total (vigente) promedio para PLAN Certificados GM es del 17.34%</span></u></b>, calculado al 29 de mayo del 2017. Para fines informativos y de comparación, sobre un monto a financiar de $165,000.00 M.N. con un enganche del 20%, con una tasa de interés del 16.10% a un plazo de 48 meses. Tasas sin IVA. Sujeto a cambios sin previo aviso. Importes sólo informativos, sujeto a vigencia y disponibilidad.</p>
+
+
+                                     <p class="font-rr font-white">Legales:
+
+
+                                    ** El vehículo a financiar debe estar asegurado contra cualquier daño y con una cobertura que baste a cubrir el valor del crédito otorgado. Puede ser con la compañía aseguradora de tu preferencia y por el total del plazo del crédito (la póliza del seguro deberá contar con el endoso preferente en favor de SU SERVICIO FINANCIERO, S.A. DE C.V. SOFOM E.N.R., a fin de garantizar el crédito.
+
+                                    Tasas sin IVA. Sujeto a cambios sin previo aviso. Importes sólo informativos, sujeto a vigencia y disponibilidad.</p>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="font-mr font-white subtitle">Beneficios</h3>
+                                    <ul class="font-rr font-white">
+                                        <li>Planes a tu medida</li>
+                                        <li>Tasas fijas</li>
+                                        <li>Atención personalizada </li>
+                                        <li>Puedes adquirir autos nuevos y seminuevos</li>
+                                        <li>Aportaciones a capital y terminación anticipada sin penalización alguna</li>
+                                    </ul>                                   
+                                </div>                               
+                            </div>
+                        </div>
+                        <div id="faqs" style="padding-left:4em;">
+                           
+                            <h3 class="font-mr font-white subtitle">¿Cómo puedo obtener un crédito?</h3>
+                            <p class="font-rr font-white">1.- Acude al distribuidor de tu preferencia</p>
+                            <p class="font-rr font-white">2.- Elige tu auto</p>
+                            <p class="font-rr font-white">3.- Presenta la siguiente documentación: Identificación Oficial Vigente (INE, Pasaporte o cédula profesional).</p>
+                            <p class="font-rr font-white">4.- Comprobante de domicilio (no mayor a 3 meses).</p>
+                            <p class="font-rr font-white">5.- Recibos de nómina de los últimos 3 meses y Estados de Cuenta Bancarios.</p>
+
+
+                            <h3 class="font-mr font-white subtitle">¿Cuáles son los documentos que debo recibir al momento de la entrega del vehículo?</h3>
+                            <p class="font-rr font-white">1.- Copia del contrato</p>
+                            <p class="font-rr font-white">2.- Pólizas de seguro que amparen el periodo completo de su crédito</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo puedo obtener mi número de contrato y cliente?</h3>
+                            <p class="font-rr font-white">El número de contrato y de cliente se localizan en la parte superior derecha de cualquiera de los anexos del contrato.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo puedo ingresar al Portal de Servicio a Clientes?</h3>
+                            <p class="font-rr font-white">1.- Ingrese a nuestra página de Internet: www.in-credit.com.mx y de clic en Clientes, se encuentra en la parte superior derecha.</p>
+                            <p class="font-rr font-white">2.- De clic en el ícono de Registrar  e ingrese  el correo electrónico que nos señaló en su solicitud de crédito para que reciba un correo con las instrucciones para concluir su alta. Con ello, usted podrá crear su contraseña e ingresar cada vez que lo requiera.</p>
+                            <p class="font-rr font-white"> <a href="{% static "docs/registro_rapido.pdf" %}" target="_blank">DESCARGAR GUÍA RÁPIDA DE REGISTRO</a></p>
+                            <p class="font-rr font-white">Si desea cambiar de cuenta de correo electrónico o no recuerda el correo electrónico que nos proporcionó, favor enviar un correo electrónico a: <a href="mailto:servicioaclientes@in-credit.com.mx" target="_top">servicioaclientes@in-credit.com.mx</a> </p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo puedo obtener un Estado de Cuenta y las Facturas de mi crédito?</h3>
+                            <p class="font-rr font-white">1.- Ingrese a nuestra página de internet:  www.in-credit.com.mx  y de clic en Clientes, se encuentra en la parte superior derecha.</p>
+                            <p class="font-rr font-white">2.- Escriba su correo electrónico y contraseña y de clic en entrar. Para mayor información consulte la pregunta 4. ¿Cómo puedo ingresar al Portal de  Servicio a Clientes?</p>
+                            <p class="font-rr font-white">3.- Al ingresar, debajo de la sección: Resumen Online de Actividades, encontrará el apartado para poder descargar sus Estados de Cuenta y Facturas, sólo tendrá que dar clic en la fecha de su preferencia y podrá visualizar ambos documentos.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo puedo saber las fechas de corte e importes que tengo que pagar?</h3>
+                            <p class="font-rr font-white">En el “anexo C” del contrato, encontrará una tabla de pagos (amortización), la cual se describe el total de pagos del crédito por el plazo convenido, fechas e importes a pagar mes con mes.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Hay penalización por pago tardío?</h3>
+                            <p class="font-rr font-white">En caso de no cubrir con el pago en la fecha estipulada, se generará un cargo por cobranza de $580.00 pesos por mensualidad no cubierta en tiempo y forma.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cómo puedo obtener el importe para liquidar mi crédito?</h3>
+                            <p class="font-rr font-white">Para realizar la liquidación del contrato, se requiere la petición por escrito al correo electrónico <a href="mailto:servicioaclientes@in-credit.com.mx" target="_top">servicioaclientes@in-credit.com.mx</a> indicando:</p>
+                            <p class="font-rr font-white">1.- Número de contrato, número de cliente o nombre completo del titular del crédito.</p>
+                            <p class="font-rr font-white">2.- Fecha prevista de la liquidación (importante que se solicite en el mes que el desee liquidar el crédito).</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cuál es el proceso para realizar un abono a capital?</h3>
+                            <p class="font-rr font-white">Realizar la petición por escrito al correo electrónico <a href="mailto:servicioaclientes@in-credit.com.mx" target="_top">servicioaclientes@in-credit.com.mx</a> indicando: </p>
+                            <p class="font-rr font-white">1.- Número de contrato o de cliente</p>
+                            <p class="font-rr font-white">2.- Importe a Abonar</p>
+                            <p class="font-rr font-white">3.- Fecha prevista del depósito.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Es posible realizar un cambio de cuenta para domiciliar mis pagos?</h3>
+                            <p class="font-rr font-white">Si es posible, siempre y cuando la cuenta a la que desee cambiar este a nombre del titular del crédito, para lo cual es indispensable realizar la petición por escrito al correo electrónico: admoncontratos@in-credit.com.mx adjuntando los siguientes documentos:</p>
+                            <p class="font-rr font-white">1.- Identificación Oficial Vigente por ambos lados</p>
+                            <p class="font-rr font-white">2.- Estado de Cuenta Bancario no mayor a 3 meses</p>
+                            <p class="font-rr font-white">3.- Formato de cambio debidamente llenado y firmado   <b> <a href="{% static "docs/domiciliacion.pdf" %}" target="_blank">Descargar formato</a></b></p>
+
+                            <h3 class="font-mr font-white subtitle">¿Qué pasa si mi fecha de corte llega a ser en día inhábil?</h3>
+                            <p class="font-rr font-white">Cuando la fecha de corte sea en fin de semana o día festivo el cargo se realizará un día antes o al día siguiente hábil sin penalización alguna.</p>
+
+                            <h3 class="font-mr font-white subtitle">No estoy de acuerdo con los cobros generados en mi cuenta, ¿cómo puedo realizar una aclaración?</h3>
+                            <p class="font-rr font-white">1.- Enviar un correo electrónico a <a href="mailto:admincontratos@in-credit.com.mx" target="_top">admoncontratos@in-credit.com.mx</a></p>
+                            <p class="font-rr font-white">2.- Indicar el número de contrato, número de cliente o nombre completo del titular del crédito.</p>
+                            <p class="font-rr font-white">3.- Una breve descripción del asunto a tratar.</p>
+                            <p class="font-rr font-white">4.- Incluir los estados de cuenta bancarios membretados, donde se reflejen los movimientos a aclarar.</p>
+                            <p class="font-rr font-white">NOTA: No se podrán realizar aclaraciones mayores a 30 días. Cláusula Séptima. Estados de Cuenta.</p>
+                            
+
+                            <h3 class="font-mr font-white subtitle">Al término de mi crédito ¿Cómo puedo obtener mi factura?</h3>
+                            <p class="font-rr font-white">Una vez realizado el último pago o bien la liquidación total del crédito, es importante que nos envíe un correo electrónico a la dirección: <a href="mailto:admoncontratos@in-credit.com.mx" target="_top">admoncontratos@in-credit.com.mx</a>, indicando el número de contrato, número de cliente o nombre completo del titular del crédito. Una vez recibida esta información, se analizará el estatus del crédito y recibirá una notificación con los pasos a seguir para recuperar la factura.</p>
+
+                            <h3 class="font-mr font-white subtitle">¿Cuáles son los documentos que debo recibir al momento de la entrega del vehículo?</h3>
+                            <p class="font-rr font-white">1.- Copia del contrato</p>
+                            <p class="font-rr font-white">2.- Pólizas de seguro que amparen el período completo del crédito.</p>
+
+
+                            <h3 class="font-mr font-white subtitle">¿Cuáles son los beneficios de los seguros que tengo contratados con IN Credit & Leasing®?</h3>
+                            <p class="font-rr font-white"><a href="{% static "docs/beneficios.pdf" %}" target="_blank">Descargar archivo con beneficios</a></p>
+
+
+
+                            <h3 class="font-mr font-white subtitle">¿Qué debo de hacer en caso de siniestro?</h3>
+
+                            <p class="font-rr font-white">1.- Conservar la calma</p>
+                            <p class="font-rr font-white">2.- Comuníquese con la compañía aseguradora que contrató al teléfono que aparece en la póliza de seguro.</p>
+                            <p class="font-rr font-white">3.- En caso de NO con contar con ella, solicítela llamado a la línea de servicio a clientes 01 (55) 4161 4032, mencionando el número de contrato, nombre del titular y correo electrónico para que le sea enviada.</p>
+                            <p class="font-rr font-white">4.- Una vez reportado el siniestro, el ajustador le indicará los pasos a seguir para hacer válida la cobertura de la póliza. </p>
+                            <p class="font-rr font-white">5.- En caso de que la compañía aseguradora determine el evento como pérdida total, es necesario que usted notifique por correo electrónico a <a href="mailto:seguros@in-credit.com.mx" target="_top">seguros@in-credit.com.mx</a>, en un lapso de 24 horas posteriores, enviando copia de la carta de Pérdida Total.  </p>
+                            <p class="font-rr font-white">6. Descargar el check list de acuerdo al tipo de siniestro y enviar la documentación indicada al correo y dirección que especifica el formato para realizar el trámite ante la compañía aseguradora: </p>
+
+                             <p class="font-rr font-white">*Check list Desempleo <u><a href="{% static "docs/desempleo.pdf" %}" target="_blank">Descargar documento</a></u></p> 
+                             <p class="font-rr font-white">*Check list Fallecimiento <u><a href="{% static "docs/fallecimiento.pdf" %}" target="_blank">Descargar documento</a></u></p> 
+                             <p class="font-rr font-white">*Check List Incapacidad Temporal <u><a href="{% static "docs/incapacidad.pdf" %}" target="_blank">Descargar documento</a></u></p> 
+                             <p class="font-rr font-white">*Check List Robo Daños Materiales <u><a href="{% static "docs/robo_daños_m.pdf" %}" target="_blank">Descargar documento</a></u></u></p> 
+                             <p class="font-rr font-white">*Check List Robo Total <u><a href="{% static "docs/robo.pdf" %}" target="_blank">Descargar documento</a></u></p> 
+                             <p class="font-rr font-white">Nota: En caso de estos tres siniestros: Desempleo, Incapacidad Temporal y Fallecimiento, favor de descargar y requisitar el siguiente formato: Formato de Reclamación: <u><a href="{% static "docs/reclamacion.pdf" %}" target="_blank">Descargar documento</a></u></p> 
+
+                            </p>
+                            <p class="font-rr font-white">7.- Le sugerimos documentar lo antes posible, ya que el interés por el siniestro seguirá corriendo.</p>
+
+
+                            <h3 class="font-mr font-white subtitle">Requiero hacer una modificación o actualización en mi póliza de seguro, ¿Qué debo hacer?</h3>
+                            <p class="font-rr font-white">1.- Enviar un correo electrónico a: <a href="mailto:seguros@in-credit.com.mx" target="_top">seguros@in-credit.com.mx</a></p>
+                            <p class="font-rr font-white">2.- Indicar el número de contrato y número de póliza.</p>
+                            <p class="font-rr font-white">3.- Mencionar que tipo de modificación o ampliación a cobertura que desea.</p>
+                            <p class="font-rr font-white">4. Con la información anterior, recibirá por correo electrónico, el cual indicará el folio para el seguimiento a su solicitud., por lo que en un lapso de 5 días hábiles se le enviará por ese mismo medio el endoso con la modificación que solicito.</p>
+                        </div>
+                        <div class="bottom" id="bottom">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <h3 class="font-me font-white faq">FAQ</h3>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <p class="font-rr font-white info2" id="mcredito"><a href="/cmoment/">Vida de un Contrato de Crédito Automotriz</a></p>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <p class="font-rr font-white info">+ Más información</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <section class="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="font-mb font-gray title">CONTACTO</h1>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group pull-right form-contact">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" maxlength="40">
+                        <label class="error" id="name-error">Nombre invalido, por favor verifícalo.</label>
+                        <input type="text" class="form-control" id="app" name="app" placeholder="Apellidos" maxlength="40">
+                        <label class="error" id="app-error">Apellidos invalido, por favor verifícalo.</label>
+                        <input type="text" class="form-control" name="number" id="number" maxlength="13" placeholder="Teléfono (+52 5544332211)">
+                        <label class="error" id="number-error">Teléfono invalido, por favor verifícalo.</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico">
+                        <label class="error" id="email-error">Email invalido, por favor verifícalo.</label>
+                        <select class="form-control" id="city" name="city">
+                            <option value="">Entidad federativa</option>
+                            <option value="Aguascalientes">   Aguascalientes  </option>
+                            <option>    Baja California </option>
+                            <option>    Baja California Sur </option>
+                            <option>    Campeche    </option>
+                            <option>    Chiapas </option>
+                            <option>    Chihuahua   </option>
+                            <option>    Ciudad de México    </option>
+                            <option>    Coahuila de Zaragoza    </option>
+                            <option>    Colima  </option>
+                            <option>    Durango </option>
+                            <option>    Estado de México    </option>
+                            <option>    Guanajuato  </option>
+                            <option>    Guerrero    </option>
+                            <option>    Hidalgo </option>
+                            <option>    Jalisco </option>
+                            <option>    Michoacán de Ocampo </option>
+                            <option>    Morelos </option>
+                            <option>    Nayarit </option>
+                            <option>    Nuevo León  </option>
+                            <option>    Oaxaca  </option>
+                            <option>    Puebla  </option>
+                            <option>    Querétaro   </option>
+                            <option>    Quintana Roo    </option>
+                            <option>    San Luis Potosí </option>
+                            <option>    Sinaloa </option>
+                            <option>    Sonora  </option>
+                            <option>    Tabasco </option>
+                            <option>    Tamaulipas  </option>
+                            <option>    Tlaxcala    </option>
+                            <option>    Veracruz de Ignacio de la Llave </option>
+                            <option>    Yucatán </option>
+                            <option>    Zacatecas   </option>
+                        </select>
+                        <label class="error" id="city-error">Debe seleccionar una entidad federativa.</label> <br>
+                        <label class="font-rr font-gray question">¿Es usted cliente de IN C&L?</label>
+                        <div class="row div-radio">
+                            <div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-1 col-sm-offset-1 col-sm-1 col-xs-offset-1 col-xs-1">
+                                <input type="radio" name="client" id="client"  value="1">
+                                <br>
+                                <label class="font-rr font-gray">SI</label>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <input type="radio" name="client" id="client" value="2">
+                                <br>
+                                <label class="font-rr font-gray">NO</label>
+                            </div>
+                        </div>
+                        <label class="error" id="client-error">Debe indicar si es cliente de IN C&L®.</label>
+                        <input type="text" class="form-control" id="contract" name="contract" placeholder="Número de contrato">
+                        <label class="error" id="contract-error">Número de contrato invalido, por favor verifícalo.</label>
+                        <select class="form-control" id="service" name="service">
+                            <option value="">Producto/Servicio de interés</option>
+                            <option>Arrendamiento puro</option>
+                            <option>Crédito automotriz</option>
+                        </select>
+                        <label class="error" id="service-error">Debe seleccionar un producto/servicio de su interés</label>
+                        <textarea class="form-control" rows="5" id="comment" placeholder="¿En que podemos ayudarle?">
+                        </textarea>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="accept" name="accept" value="">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                <span class="font-rr font-blue">Condiciones de uso y politicas de privacidad</span>
+                            </label>
+                        </div>
+                        <button style="position: absolute; right: 0; margin-top: -1.9em;" id="send-contact">ENVIAR</button>
+                        <label class="error" id="accept-error">Debe aceptar las condiciones de uso y politicas de privacidad</label>                                                 
+                        <div class="g-recaptcha" data-sitekey="6LeAxSgUAAAAACyE8nN53s32eZMy6pA0QJsS-p1f"></div>
+                         <label class="error" id="captcha-error">Debes aceptar el captcha</label>                                                                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer style="padding-top:2em; padding-bottom:2em;">
+        <center>
+            <p class="font-mt font-white" style="font-size:1.1em; margin-bottom:2em;"><a href="/aviso/">Aviso de privacidad</a> - <a href="/une/">UNE</a> - <a href="/buro/">Buró de Entidades Financieras</a> - <a href="{% static "docs/terminos_condiciones.pdf" %}" target="_blank">Términos y Condiciones</a> - <a href="{% static "docs/educacion_financiera.pdf" %}" target="_blank">Finanzas Personales</a> - <a href="https://grupo.lmsmexico.com.mx/incredit/">Seguros</a> - <a href="/documentacion/">Documentación</a></p>
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <p class="font-mt font-white" style="font-size:1.1em;">
+                        01 800 4627 3348
+                        <br>
+                        (55) 4161 4080
+                        <br>
+                        <a href="mailto:servicioacliente@in-credit.com.mx" target="_top">
+                            servicioacliente@in-credit.com.mx
+                        </a>
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <img src="{% static "img/logo.png" %}">
+                </div>
+                <div class="col-lg-5 col-md-5">
+                    <p class="font-mt font-white" style="font-size:1.1em;">
+                        Su Servicio Financiero SA de CV SOFOM ENR
+                        <br>
+                        Paseo de las Palmas 735, piso 15
+                        <br>
+                        Lomas de Chapultepec, CP 11000
+                        <br>
+                        Ciudad de México
+                    </p>
+                </div>
+            </div>
+            
+        </center>    
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static "js/vendor/jquery.min.js" %}"><\/script>')</script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/jquery.maskedinput.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+  </body>
+</html>

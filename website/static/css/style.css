@@ -1,0 +1,1860 @@
+@font-face {
+    font-family: Mont_ExtraBold;
+    src: url("../fonts/Montserrat-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: Mont_Bold;
+    src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: Mont_Regular;
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: Mont_Thin;
+    src: url("../fonts/Montserrat-Thin.ttf");
+}
+
+@font-face {
+    font-family: Robo_Regular;
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Robo_Light;
+    src: url("../fonts/Roboto-Light.ttf");
+}
+
+.font-white{
+    color: #FFF;
+}
+
+.font-blue{
+    color: #426DC0;
+}
+
+.font-blue2{
+    color: #5A6C8F;
+}
+
+.font-gray{
+    color: #2B2C2D;
+}
+
+.font-me{
+    font-family: Mont_ExtraBold;
+}
+
+.font-mt{
+    font-family: Mont_Thin;
+}
+
+.font-mb{
+    font-family: Mont_Bold;
+}
+
+.font-mr{
+    font-family: Mont_Regular;
+}
+
+.font-rr{
+    font-family: Robo_Regular;
+}
+
+.font-rl{
+    font-family: Robo_Light;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE HOME */
+
+.home {
+  /*margin-bottom: 60px;*/
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (min-width : 992px) {
+    .home{
+        margin-bottom: 60px;
+    }
+    .home .title{
+        font-size:7em;
+    }
+    .home .container{
+        padding-top:16em;
+        padding-bottom:22em;
+        padding-left:3em;
+    }
+    .home .subtitle{
+        font-size:1.6em;
+        margin-top:-1.1em;
+    }
+
+    .menu-incredit{
+        height: 80px;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .logo-menu{
+        width: 85px; 
+        height: 85px;
+    }
+
+}
+
+@media only screen and (max-width : 992px) {
+    .home{
+        margin-bottom: 60px;
+    }
+    .home .title{
+        font-size:7em;
+    }
+    .home .container{
+        padding-top:16em;
+        padding-bottom:22em;
+        padding-left:3em;
+    }
+    .home .subtitle{
+        font-size:1.6em;
+        margin-top:-1.1em;
+    }
+
+    .menu-incredit{
+        /*height: 80px;*/
+        border-color: transparent;
+    }
+
+    .logo-menu{
+        margin-top: -9px;
+        width: 40px; 
+        height: 40px;
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+    .home{
+        margin-bottom: 0px;
+    }
+    .home .title{
+        font-size:3em;
+    }
+    .home .container{
+        padding-top:16em;
+        padding-bottom:16em;
+        padding-left:2em;
+    }
+    .home .subtitle{
+        font-size:1.4em;
+        margin-top: 0.5em;
+    }
+
+    .menu-incredit{
+        /*height: 80px;*/
+        /*border-color: transparent;*/
+    }
+
+    .logo-menu{
+        margin-top: -9px;
+        width: 40px; 
+        height: 40px;
+    }
+}
+
+
+/* CUSTOMIZE THE US */
+
+.back-us{
+    /*background-color: #2B2C2D;*/
+    background-image: url("../img/us_back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (min-width : 1000px) {
+    .back-us{
+        padding-top: 8em;
+        margin-top: -8em;
+    }
+
+    .us .container{
+        padding-top:4em;
+        padding-bottom:8em;
+    }
+
+    .us .title{
+        font-size:5.8em;
+    }
+
+    .us .subtitle{
+        font-size:2.8em;
+    }
+
+    .us .div-text{
+        margin-top: -3.5em !important;
+    }
+}
+
+@media only screen and (max-width : 1000px) {
+    .back-us{
+        padding-top: 8em;
+        margin-top: -8em;
+        background-color: #2B2C2D;
+    }
+
+    .us .container{
+        padding-top:4em;
+        padding-bottom:8em;
+    }
+
+    .us .title{
+        font-size:5.8em;
+    }
+
+    .us .subtitle{
+        font-size:2.8em;
+    }
+
+    .us .div-text{
+        margin-top: -3.5em !important;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .back-us{
+        padding-top: 8em;
+        margin-top: -8em;
+        background-color: #2B2C2D;
+    }
+
+    .us .container{
+        padding-top:4em;
+        padding-bottom:6em;
+    }
+
+    .us .title{
+        font-size:5.8em;
+    }
+    
+    .us .subtitle{
+        font-size:2.8em;
+        margin-top: 0.5em;
+    }
+
+    .us .div-text{
+        margin-top: -3.5em !important;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .back-us{
+        padding-top: 0em;
+        margin-top: 0em;
+        background-color: #2B2C2D;
+    }
+
+    .us .container{
+        padding-top:2em;
+        padding-bottom:4em;
+    }
+
+    .us .title{
+        text-align: center;
+        font-size:3.4em;
+    }
+    
+    .us .subtitle{
+        font-size:2.4em;
+    }
+
+    .us .div-text{
+        margin-top: 0em !important;
+    }
+}
+
+
+
+/* CUSTOMIZE THE MISION AND VISION */
+
+.vision .container{
+    padding-top:4em;
+    padding-bottom:6em;
+}
+
+@media only screen and (min-width : 992px) {
+    .vision .title{
+        font-size:4.3em;
+    }
+
+    .vision .title2{
+        font-size:4.3em;
+        text-align:right;
+    }
+
+    .vision .text{
+        font-size:1em;
+        padding-left:3em;
+        margin-top:-1.4em;
+    }
+
+    .vision .text2{
+        font-size: 1em;
+        padding-right: 2em; 
+        margin-top: -1.4em;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+     .vision .title{
+        font-size:4.3em;
+    }
+
+    .vision .title2{
+        font-size:4.3em;
+        text-align:right;
+    }
+    
+    .vision .text{
+        font-size:1em;
+        padding-left:3em;
+        margin-top:-1.4em;
+    }
+
+    .vision .text2{
+        font-size: 1em;
+        padding-right: 2em; 
+        margin-top: -1.4em;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+     .vision .title{
+        font-size:3.3em;
+        text-align: center;
+    }
+
+    .vision .title2{
+        font-size:3.3em;
+        text-align: center;
+    }
+
+    .vision .text{
+        font-size: 1em;
+        padding-left: 0em;
+        margin-top: -0.4em;
+        text-align: justify;
+    }
+
+    .vision .text2{
+        font-size: 1em;
+        padding-right: 0em; 
+        margin-top: -0.4em;
+        text-align: justify;
+    }
+}
+
+
+
+/* CUSTOMIZE THE FOOTER */
+
+footer{
+    background-color: #2B2C2D;
+}
+
+@media only screen and (min-width : 992px) {
+    footer img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    footer img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    footer img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/* CUSTOMIZE THE AVISO */
+
+.body-aviso{
+    background-color: #436CC0;
+}
+
+@media only screen and (min-width : 992px) {
+    .aviso img{
+        width: 50%;
+        margin-left: 25%;
+        height: auto;
+        margin-top: 2em;
+    }
+
+    .aviso .title{
+        font-size: 5em;
+        text-align: left;
+        padding-top: 1em;
+    }
+
+    .aviso .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    .aviso button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .aviso img{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 2em;
+    }
+
+    .aviso .title{
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .aviso .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .aviso button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .aviso img{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 2em;
+    }
+
+    .aviso .title{
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .aviso .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .aviso button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+
+
+/* CUSTOMIZE THE FINANCIAMIENTO */
+
+.financiamiento .header {
+    background-image: url('../img/finan-back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 4em;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+@media only screen and (min-width : 992px) {
+    .financiamiento{
+        padding-bottom: 3em;
+    }
+
+    .financiamiento .title{
+        font-size: 5em;
+        text-align: right;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .financiamiento .subtitle{
+        font-size: 2.8em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .subtitle-leg{
+        font-size: 1.4em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .text{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1em;
+        text-align: justify;
+    } 
+
+    .financiamiento .text-leg{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 0.8em;
+        text-align: justify;
+        font-style: italic;
+    } 
+
+    .financiamiento .text-cat{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1.5em;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .financiamiento .title{
+        font-size: 5em;
+        text-align: right;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
+    }
+
+    .financiamiento .subtitle{
+        font-size: 1.8em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .subtitle-leg{
+        font-size: 1.2em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .text{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1em;
+        text-align: justify;
+    } 
+
+    .financiamiento .text-leg{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 0.8em;
+        text-align: justify;
+        font-style: italic;
+    } 
+
+    .financiamiento .text-cat{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1.3em;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .financiamiento .title{
+        font-size: 2em;
+        text-align: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .financiamiento .subtitle{
+        font-size: 1.5em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .subtitle-leg{
+        font-size: 1.1em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .text{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1em;
+        text-align: justify;
+    } 
+
+    .financiamiento .text-leg{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 0.7em;
+        text-align: justify;
+        font-style: italic;
+    } 
+    
+    .financiamiento .text-cat{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1.2em;
+        text-align: justify;
+    }
+}
+
+
+
+
+/* CUSTOMIZE THE UNE */
+
+.body-une{
+    background-color: #436CC0;
+}
+
+.container-condu{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+@media only screen and (min-width : 992px) {
+    .une img.logo{
+        width: 40%;
+        margin-left: 30%;
+        height: auto;
+        margin-top: 2em;
+    }
+
+    .une .title{
+        font-size: 5em;
+        text-align: right;
+        padding-top: 0.4em;
+    }
+
+    .une .subtitle{
+        font-size: 1.8em;
+        text-align: right;
+        margin-top: -0.8em;
+    }
+
+    .une .subtext{
+        font-size: 1.1em;
+        text-align: right;
+    }
+
+    .une .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    .une button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+
+    .une img.condu{
+        width: 40%;
+        height: auto;
+        padding: 2em;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .une img.logo{
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 2em;
+    }
+
+    .une .title{
+        font-size: 5em;
+        text-align: right;
+    }
+
+    .une .subtitle{
+        font-size: 1.8em;
+        text-align: right;
+        margin-top: -0.8em;
+    }
+
+    .une .subtext{
+        font-size: 1em;
+        text-align: right;
+    }
+
+    .une .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .une button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+
+    .une img.condu{
+        width: 40%;
+        height: auto;
+        padding: 2em;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .une img.logo{
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 2em;
+    }
+
+    .une .title{
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .une .subtitle{
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: -0.8em;
+    }
+
+    .une .subtext{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .une .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+    }
+    
+    .une button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+
+    .une img.condu{
+        width: 40%;
+        height: auto;
+        padding: 2em;
+    }
+}
+
+
+/* CUSTOMIZE THE MOMENTS ARRENDAMIENTO */
+
+body.arrendamiento{
+    background-color: #436CBA;
+}
+.arrendamiento section.header{
+    background-image: url('../img/marrendamiento_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.arrendamiento button{
+    background-color: transparent;
+    border: 0px solid #ffffff;
+    padding: 0.8em;
+    margin-top: 1em;
+}
+
+@media only screen and (min-width : 992px) {
+    .arrendamiento img.logo{
+        width: 30%;
+        margin-left: 35%;
+        height: auto;
+        margin-top: 1em;
+    } 
+    .arrendamiento .title{
+        margin-top: 1em;
+        margin-bottom: 4em;
+    }
+    .arrendamiento .text{
+        margin-left: 4em;
+    }
+    .arrendamiento div.info{
+        margin-bottom: 4em;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .arrendamiento img.logo{
+        width: 30%;
+        height: auto;
+        margin-left: 35%;
+        margin-top: 2em;
+    } 
+    .arrendamiento .title{
+        margin-top: 1em;
+        margin-bottom: 4em;
+    }   
+    .arrendamiento .text{
+        margin-left: 2em;
+    }
+    .arrendamiento div.info{
+        margin-bottom: 3em;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .arrendamiento img.logo{
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 2em;
+    } 
+    .arrendamiento img.condu{
+        width: 40%;
+        height: auto;
+        margin-left: 30%;
+        padding: 2em;
+    }
+    .arrendamiento .title{
+        margin-top: 1em;
+        margin-bottom: 4em;
+    }
+    .arrendamiento .text{
+        margin-left: 2em;
+    }
+    .arrendamiento div.info{
+        margin-bottom: 2em;
+    }
+}
+
+
+/* CUSTOMIZE THE MOMENTS CREDIT */
+
+body.mcredito{
+    background-color: #FA2222;
+}
+
+.mcredito section.header{
+    background-image: url('../img/mcredito_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.mcredito button{
+    background-color: transparent;
+    border: 0px solid #ffffff;
+    padding: 0.8em;
+    margin-top: 1em;
+}
+
+@media only screen and (min-width : 992px) {
+    .mcredito img.logo{
+        width: 30%;
+        margin-left: 35%;
+        height: auto;
+        margin-top: 1em;
+    } 
+    .mcredito .title{
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+    .mcredito .text{
+        margin-left: 4em;
+    }
+    .mcredito div.info{
+        margin-bottom: 4em;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .mcredito img.logo{
+        width: 30%;
+        height: auto;
+        margin-left: 35%;
+        margin-top: 2em;
+    } 
+    .mcredito .title{
+        margin-top: 1em;
+        margin-bottom: 4em;
+    }   
+    .mcredito .text{
+        margin-left: 2em;
+    }
+    .mcredito div.info{
+        margin-bottom: 3em;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .mcredito img.logo{
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 2em;
+    } 
+    .mcredito img.condu{
+        width: 40%;
+        height: auto;
+        margin-left: 30%;
+        padding: 2em;
+    }
+    .mcredito .title{
+        margin-top: 1em;
+        margin-bottom: 4em;
+    }
+    .mcredito .text{
+        margin-left: 2em;
+    }
+    .mcredito div.info{
+        margin-bottom: 2em;
+    }
+}
+
+
+/* CUSTOMIZE THE BURO */
+
+.body-buro{
+    background-color: #436CC0;
+}
+
+@media only screen and (min-width : 992px) {
+    .buro img.logo{
+        width: 50%;
+        margin-left: 25%;
+        height: auto;
+        margin-top: 2em;
+    }
+
+    .buro .title{
+        font-size: 5em;
+        text-align: right;
+        padding-top: 0.4em;
+    }
+
+    .buro .subtitle{
+        font-size: 1.8em;
+        text-align: right;
+        margin-top: -0.8em;
+    }
+
+    .buro .subtext{
+        font-size: 1.1em;
+        text-align: right;
+    }
+
+    .buro .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    .buro button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .buro img.logo{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 2em;
+    }
+
+    .buro .title{
+        font-size: 5em;
+        text-align: right;
+    }
+
+    .buro .subtitle{
+        font-size: 1.8em;
+        text-align: right;
+        margin-top: -0.8em;
+    }
+
+    .buro .subtext{
+        font-size: 1em;
+        text-align: right;
+    }
+
+    .buro .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .buro button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .buro img.logo{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 2em;
+    }
+
+    .buro .title{
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .buro .subtitle{
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: -0.8em;
+    }
+
+    .buro .subtext{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .buro .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+    }
+    
+    .buro button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+
+/* CUSTOMIZE THE COTIZADOR */
+
+.body-cotizador{
+    background-color: #436CC0;
+}
+
+@media only screen and (min-width : 992px) {
+    .cotizador img{
+        width: 50%;
+        margin-left: 25%;
+        height: auto;
+        margin-top: 2em;
+    }
+
+    .cotizador .title{
+        font-size: 5em;
+        text-align: left;
+        padding-top: 0em;
+    }
+
+    .cotizador .text{
+        padding-top: 0em;
+        padding-bottom: 3em;
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    .cotizador button{
+        background-color: transparent;
+        border: 2px solid #436CC0;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .cotizador img{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 2em;
+    }
+
+    .cotizador .title{
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .cotizador .text{
+        padding-top: 0em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .cotizador button{
+        background-color: transparent;
+        border: 2px solid #436CC0;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .cotizador img{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .cotizador .title{
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    .cotizador .text{
+        padding-top: 0em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .cotizador button{
+        background-color: transparent;
+        border: 2px solid #436CC0;
+        padding: 0.8em;
+        margin-top: 1em;
+    }
+}
+
+
+
+/* CUSTOMIZE THE COBRANZA */
+
+.body-cobranza{
+    background-color: #436CC0;
+    margin-bottom: 3em;
+}
+
+.cobranza button{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    padding: 0.8em;
+    margin-top: 1em;
+}
+
+.cotizador button{
+    background-color: #436CC0;
+    border: 2px solid #436CC0;
+    padding: 0.8em;
+    margin-top: 1em;
+}
+
+@media only screen and (min-width : 992px) {
+    .cobranza img{
+        width: 50%;
+        margin-left: 25%;
+        height: auto;
+        margin-top: 2em;
+    }
+
+    .cobranza .title{
+        font-size: 2.2em;
+        text-align: left;
+        padding-top: 2em;
+    }
+
+    .cobranza .text{
+        padding-top: 3em;
+        padding-bottom: 1em;
+        font-size: 1.1em;
+        text-align: justify;
+        border-bottom: 1px solid #FFF;
+    }
+
+}
+
+@media only screen and (max-width : 992px) {
+    .cobranza img{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 2em;
+    }
+
+    .cobranza .title{
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .cobranza .text{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        font-size: 1em;
+        text-align: justify;
+        border-bottom: 1px solid #FFF;
+    }
+    
+}
+
+@media only screen and (max-width : 480px) {
+    .cobranza img{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 2em;
+    }
+
+    .cobranza .title{
+        margin-top: 0.5em;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .cobranza .text{
+        padding-top: 2em;
+        padding-bottom: 2em;
+        font-size: 1em;
+        text-align: justify;
+        border-bottom: 1px solid #FFF;
+    }
+}
+
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+  .font-nav{
+      font-size: 1.2em;
+  }
+}
+
+.navbar-inverse .navbar-nav.blue>li>a {
+    color: #337ab7;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #FFF;
+}
+
+a:link {color:#ffffff;}
+a:visited {color:#ffffff;}
+a:active {color:#ffffff;}
+a:hover {color:#ffffff;}
+
+
+
+
+
+/* PRODUCTS */
+
+.productos .container{
+    width: auto;
+}
+
+.productos .row{
+    width: auto;
+}
+
+#arrendamiento {
+    background-image: url('../img/arrendamiento.jpg');
+    background-size: cover;
+    background-position: center center;
+    overflow: scroll;
+    padding: 1em 0em 1em 2em;
+    /*border-right: 2px solid #FFF;*/
+}
+
+#financiamiento {
+    background-image: url('../img/financiamiento.jpg');
+    background-size: cover;
+    background-position: center center;
+    overflow: scroll;
+    padding: 1em 0em 1em 2em;
+}
+
+.productos div.bottom div.row div{
+    text-align: center;
+}
+
+@media only screen and (min-width : 992px) {
+    .productos .title{
+        padding-bottom: 0.3em;
+    }
+
+    .productos .subtitle{
+        padding-top: 0.8em;
+    }
+
+    .productos div.bottom{
+        position: relative;
+        margin-top: 6em;
+    }
+
+    #financiamiento div.bottom{
+        position: relative;
+        margin-top: 4em;
+    }
+
+    #arrendamiento #out{
+        margin-top: 2em;
+    }
+
+    #financiamiento #out{
+        margin-top: 2em;
+        text-align: right;
+        padding-right: 2em;
+    }
+
+    #financiamiento #active{
+        text-align: right;
+        padding-right: 2em;
+    }
+
+    .move{
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    .productos .faq{
+        position:absolute;
+        bottom:0;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .productos .info{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .productos .info2{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0px;
+    }
+
+    /*.financiamiento .subtitle{
+        font-size: 2.8em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .subtitle-leg{
+        font-size: 1.4em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .text{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1em;
+        text-align: justify;
+    } 
+
+    .financiamiento .text-leg{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 0.8em;
+        text-align: justify;
+        font-style: italic;
+    } 
+
+    .financiamiento .text-cat{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1.5em;
+        text-align: justify;
+    }*/
+}
+
+@media only screen and (max-width : 992px) {
+    .productos .title{
+        padding-bottom: 1.3em;
+    }
+
+    .productos .subtitle{
+        padding-top: 0.3em;
+    }
+
+    .productos .faq{
+        padding-top: 0.8em;
+    }
+
+    /*.financiamiento .subtitle{
+        font-size: 1.8em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .subtitle-leg{
+        font-size: 1.2em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .text{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1em;
+        text-align: justify;
+    } 
+
+    .financiamiento .text-leg{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 0.8em;
+        text-align: justify;
+        font-style: italic;
+    } 
+
+    .financiamiento .text-cat{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1.3em;
+        text-align: justify;
+    }*/
+}
+
+@media only screen and (max-width : 480px) {
+    .productos .title{
+        padding-bottom: 0.6em;
+    }
+
+    .productos .subtitle{
+        padding-top: 0.3em;
+    }
+
+    .productos .faq{
+        padding-top: 0.3em;
+    }
+
+    /*.financiamiento .subtitle{
+        font-size: 1.5em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .subtitle-leg{
+        font-size: 1.1em;
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+    .financiamiento .text{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1em;
+        text-align: justify;
+    } 
+
+    .financiamiento .text-leg{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 0.7em;
+        text-align: justify;
+        font-style: italic;
+    } 
+    
+    .financiamiento .text-cat{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 1.2em;
+        text-align: justify;
+    }*/
+}
+
+
+
+/* CONTACT */
+.contacto{
+    background-image: url('../img/car.png');
+    background-size: 55% auto;
+    background-repeat: no-repeat;
+    background-position-x: -12em;
+    /*background-position-y: 0.5em;*/
+}
+
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+
+.error{
+    color: #ff3232;
+    font-size: 0.8em;
+}
+
+.input-error{
+    border-color: #ff3232 !important;
+    margin-bottom: 0em !important;
+}
+
+@media only screen and (min-width : 992px) {
+    .contacto .title{
+        font-size: 5em;
+        text-align: center;
+        margin-top: 0.8em;
+        margin-bottom: 0.5em;
+    }
+
+    .contacto .question{
+        font-size: 2em;
+        font-weight: 100;
+    }
+
+    .contacto input[type=radio]{
+        font-family: Robo_Regular;
+        left: 0;
+    }
+
+    .contacto .div-radio{
+        margin-bottom: 0.8em;
+    }
+
+    .contacto input[type=text],
+    .contacto input[type=number],
+    .contacto input[type=email], 
+    .contacto select{
+        width: 28em;
+        right: 0;
+        background-color: #EAEBED;
+        font-family: Robo_Regular;
+        font-size: 1.2em;
+        border: 1px solid #0F6F8F;
+        margin-bottom: 0.4em;
+    }
+
+    .contacto textarea{
+        width: 28em;
+        right: 0;
+        background-color: #EAEBED;
+        font-family: Robo_Regular;
+        font-size: 1.2em;
+        border: 1px solid #0F6F8F;
+        margin-bottom: 0.4em;
+    }
+
+    .contacto button{
+        background-color: #40689B;
+        border: 1px solid #FFF;
+        padding: 6px;
+        color: #FFF;
+        font-family: Mont_ExtraBold;
+        font-size: 2.2em;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+        .contacto .title{
+            font-size: 5em;
+            text-align: center;
+            margin-top: 0.8em;
+            margin-bottom: 0.5em;
+        }
+
+        .contacto .question{
+            font-size: 2em;
+            font-weight: 100;
+        }
+
+        .contacto input[type=radio]{
+            font-family: Robo_Regular;
+            left: 0;
+        }
+
+        .contacto .div-radio{
+            margin-bottom: 0.8em;
+        }
+
+        .contacto input[type=text],
+        .contacto input[type=number],
+        .contacto input[type=email], 
+        .contacto select{
+            width: 28em;
+            right: 0;
+            background-color: #EAEBED;
+            font-family: Robo_Regular;
+            font-size: 1.2em;
+            border: 1px solid #0F6F8F;
+            margin-bottom: 0.4em;
+        }
+
+        .contacto textarea{
+            width: 28em;
+            right: 0;
+            background-color: #EAEBED;
+            font-family: Robo_Regular;
+            font-size: 1.2em;
+            border: 1px solid #0F6F8F;
+            margin-bottom: 0.4em;
+        }
+
+        .contacto button{
+            background-color: #40689B;
+            border: 1px solid #FFF;
+            padding: 6px;
+            color: #FFF;
+            font-family: Mont_ExtraBold;
+            font-size: 1.8em;
+            border-radius: 5px;
+        }
+    }
+
+    @media only screen and (max-width : 480px) {
+        .form-contact{
+            float: none !important;
+        }
+        .contacto .title{
+            font-size: 3em;
+            text-align: center;
+            margin-top: 0.8em;
+            margin-bottom: 0.5em;
+        }
+
+        .contacto .question{
+            font-size: 1.5em;
+            font-weight: 100;
+        }
+
+        .contacto input[type=radio]{
+            font-family: Robo_Regular;
+            left: 0;
+        }
+
+        .contacto .div-radio{
+            margin-bottom: 0.8em;
+        }
+
+        .contacto input[type=text],
+        .contacto input[type=number],
+        .contacto input[type=email], 
+        .contacto select{
+            width: 100%;
+            right: 0;
+            background-color: #EAEBED;
+            font-family: Robo_Regular;
+            font-size: 1.2em;
+            border: 1px solid #0F6F8F;
+            margin-bottom: 0.4em;
+        }
+
+        .contacto textarea{
+            width: 100%;
+            right: 0;
+            background-color: #EAEBED;
+            font-family: Robo_Regular;
+            font-size: 1.2em;
+            border: 1px solid #0F6F8F;
+            margin-bottom: 0.4em;
+        }
+
+        .contacto button{
+            background-color: #40689B;
+            border: 1px solid #FFF;
+            padding: 6px;
+            color: #FFF;
+            font-family: Mont_ExtraBold;
+            font-size: 1.5em;
+            border-radius: 5px;
+        }
+    }   
+
+
+/* COTIZADOR */
+section.cotizador{
+    background-color: #EAEBED;
+}
+
+.wrap {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.quart {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  background: tomato;
+  transition: all 0.4s;
+}
+.quart:first-child {
+  top: 0;
+  left: 0;
+}
+.quart:nth-child(2) {
+  top: 30%;
+  left: 25%;
+  background: blueviolet;
+}
+.quart:nth-child(3) {
+  top: 0;
+  left: 50%;
+}
+.quart:nth-child(4) {
+  top: 0;
+  left: 75%;
+}
+.quart:nth-child(5) {
+  top: 50%;
+  left: 0;
+}
+.quart:nth-child(6) {
+  top: 50%;
+  left: 50%;
+}
+.center {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background: lightgray;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 160px;
+}
+.quart:hover {
+  background: dimgray;
+}
