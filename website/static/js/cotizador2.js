@@ -251,6 +251,7 @@ $(document).ready(function() {
 
     $('#opt-next').hide();
 
+
     $('.brand-option').click(function(){
         brand_id = $(this).attr('id');
         brand_name = $(this).attr('name');
@@ -449,6 +450,29 @@ $(document).ready(function() {
         $("#step1").addClass('complete');
         $("#step2").removeClass('disabled');
         $("#step2").addClass('active');
+
+
+
+
+        // $('#rmodel').;
+        // $('#ryear').hide();
+        // $('#rprice').hide();
+        //
+        // $('#rhitch').hide()
+        // $('#rproduct').hide()
+        // $('#rpeople').hide()
+        // $('#rpackage').hide()
+        // $('#rtime').hide()
+
+        $("#quote-info").show();
+
+        $("#resume-container").append('<span id="rbrand"></span><br>');
+        $('#rbrand').html(brand_name);
+
+
+
+
+
         // }
     });
 
@@ -484,6 +508,10 @@ $(document).ready(function() {
             $('#products').fadeIn(2000);
             $('#packages-nav').removeClass('active');
             $('#products-nav').addClass('active');
+
+            $("#resume-container").append('Paquete <span id="rpackage"></span><br>');
+            $('#rpackage').html(package);
+
         });
         $(".package").mouseout(function() {
             $("#option-detail").html("");
@@ -499,6 +527,8 @@ $(document).ready(function() {
         $("#step2").addClass('complete');
         $("#step3").removeClass('disabled');
         $("#step3").addClass('active');
+
+
     });
 
     $(".product").click(function(){
@@ -508,6 +538,12 @@ $(document).ready(function() {
         $('#people').fadeIn(2000);
         $('#products-nav').removeClass('active');
         $('#people-nav').addClass('active');
+
+
+        $("#resume-container").append('<span id="rproduct"></span><br>');
+        $('#rproduct').html(product_name);
+
+
     });
 
     $(".person").click(function(){
@@ -520,6 +556,9 @@ $(document).ready(function() {
         $('#hitch').fadeIn(2000);
         $('#people-nav').removeClass('active');
         $('#hitch-nav').addClass('active');
+
+        $("#resume-container").append('<span id="rpeople"></span><br>Plan IN Credit<br>');
+        $('#rpeople').html(person_name);
     });
 
     $("#porcentage").change(function(){
@@ -533,6 +572,9 @@ $(document).ready(function() {
         $('#times').fadeIn(2000);
         $('#hitch-nav').removeClass('active');
         $('#times-nav').addClass('active');
+
+        $("#resume-container").append('<span id="rhitch"></span><br>');
+        $('#rhitch').html('Enganche ' + hitch + '%' + ' [' + (package_price * (hitch / 100)) + ']');
     });
 
     $(".bs-wizard").click(function() {
@@ -564,15 +606,15 @@ $(document).ready(function() {
         console.log(car_select);
         console.log(package_select);
 
-        $('#rbrand').html(brand_name);
+        $("#resume-container").append('<span id="rmodel"></span><br>');
+        $("#resume-container").append('<span id="ryear"></span><br>');
+        $("#resume-container").append('<span id="rprice"></span><br>');
+        $("#resume-container").append('<span id="rtime"></span><br>');
+
         $('#rmodel').html(car_select['fields'].name);
         $('#ryear').html(package_select.model);
         $('#rprice').html(package_price);
         $('#rprice').formatCurrency();
-        $('#rhitch').html('Enganche ' + hitch + '%' + ' [' + (package_price * (hitch / 100)) + ']');
-        $('#rproduct').html(product_name);
-        $('#rpeople').html(person_name);
-        $('#rpackage').html(package);
         $('#rtime').html('Plaza a ' + time_name);
 
         $("#option").hide();
