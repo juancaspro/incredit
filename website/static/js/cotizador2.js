@@ -210,48 +210,30 @@ $(document).ready(function() {
     $('#times').hide();
 
 
-
-
-
     // Prepare and adjust brands circle
     var width_option = $('#option').width();
-    var scale_outside = (width_option * 21)/100; // aproximadamente 150 web
-    var scale_inside = (width_option * 12)/100; // aproximadamente 85 web
+    var scale_outside = (width_option * 30)/100; // aproximadamente 150 web
 
+    var scale_inside = (width_option * 18)/100; // aproximadamente 85 web
+    // var scale_inside = 145; // aproximadamente 85 web
 
-
-
-
-    if(isResponsive()){
-        $('#options').css({
-            'width': width_option + 'px',
-            'height': width_option + 'px'
-        });
-
-        $('#option div.options-button').css({
-            'width': ((width_option / 3) * 2) + 'px',
-            'height': ((width_option / 3) * 2) + 'px',
-            'margin': ((width_option / 3) * -1)  + 'px 0 0 ' + ((width_option / 3) * -1) + 'px'
-        });
-
-    }else{
-        $('#options').css({
-            'width': width_option - scale_outside+ 'px',
-            'height': width_option - scale_outside+ 'px'
-        });
-
-
-        $('#option div.options-button').css({
-            'width': ((width_option / 3) * 2) - scale_inside + 'px',
-            'height': ((width_option / 3) * 2) - scale_inside + 'px',
-
-        });
-    }
-
-
-    $('#option div.options-button>div').css({
-        'padding-top': (((width_option / 3) * 2) - $('div.options-button >div').height()) / 2 + 'px'
+    // var scale_outside = 220;
+    $('#options').css({
+        'width': width_option - scale_outside+ 'px',
+        'height': width_option - scale_outside+ 'px'
     });
+
+    $('#option div.options-button').css({
+        'width': ((width_option / 3) * 2) - scale_inside + 'px',
+        'height': ((width_option / 3) * 2) - scale_inside + 'px',
+        // 'margin': ((width_option / 3) * -1)  + 'px 0 0 ' + ((width_option / 3) * -1) + 'px'
+        // 'margin-top':((width_option /3 )*-1)
+    });
+
+
+    // $('#option div.options-button>div').css({
+    //     'padding-top': (((width_option / 3) * 2) - $('div.options-button >div').height()) / 2 + 'px'
+    // });
 
 
     $('#options .circle-item-back').css({
@@ -382,7 +364,7 @@ $(document).ready(function() {
                     'margin': ((width_models / 3) * -1) + 'px 0 0 ' + ((width_models / 3) * -1) + 'px'
                 });
                 $('#circle-models div.circle-center>div').css({
-                    'padding-top': '80px'
+                    'padding-top': '80px',
                     // 'padding-top': (((width_models / 3) * 2) - $('div.circle-center>div').height()) / 2 + 'px'
 
                 });
@@ -551,6 +533,13 @@ $(document).ready(function() {
         $('#hitch-nav').removeClass('active');
         $('#times-nav').addClass('active');
     });
+
+    $(".bs-wizard").click(function() {
+        $("#quote-circle").hide();
+        $("#quote-info").hide();
+        hitch = $('#porcentage').val();
+    });
+
 
     $(".time").click(function(){
         time = $(this).attr('value');
