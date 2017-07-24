@@ -4,7 +4,7 @@ function getTasa(tasa, type) {
     }else{
         return ((tasa / 12) / 100);
     }
-    
+
 }
 
 function getValorDeCuotaFija(monto, tasa, cuotas, type_person) {
@@ -27,7 +27,7 @@ function getAmortizacion(monto, tasa, cuotas, cuota, type_person) {
             abono = cuota - interes;
             iva = 0;
         }
-        
+
         saldo -= abono;
         numero = i + 1;
 
@@ -57,6 +57,16 @@ function formatAmort(items){
     }
 }
 
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
 function getTypes(cars){
     types_str = ['Autos', 'SUV', 'Pickups', 'Vans', 'Deportivos', 'Eléctricos'];
     types = [];
@@ -81,6 +91,10 @@ function getTypes(cars){
     return types_obj;
 }
 
+function isResponsive() {
+    return $(window).width() < 960;
+}
+
 $(document).ready(function() {
     // if($('body').width() < 992){
     //     // console.log("Redirect")
@@ -103,13 +117,14 @@ $(document).ready(function() {
     // Prepare and adjust brands circle
     var width_brands = $('#brands').width();
 
+
     $('ul.circle#circle-brands').css({
-        'width': width_brands + 'px', 
+        'width': width_brands + 'px',
         'height': width_brands + 'px'
     });
 
     $('#circle-brands div.circle-center').css({
-        'width': ((width_brands / 3) * 2) + 'px', 
+        'width': ((width_brands / 3) * 2) + 'px',
         'height': ((width_brands / 3) * 2) + 'px',
         'margin': ((width_brands / 3) * -1) + 'px 0 0 ' + ((width_brands / 3) * -1) + 'px'
     });
@@ -117,7 +132,7 @@ $(document).ready(function() {
         'padding-top': (((width_brands / 3) * 2) - $('div.circle-center>div').height()) / 2 + 'px'
     });
     $('#circle-brands .circle-item-back').css({
-        'width': ((width_brands / 2) + 2) + 'px', 
+        'width': ((width_brands / 2) + 2) + 'px',
         'height': ((width_brands / 2) + 2) + 'px',
         'margin-top': (((width_brands / 2) + 2) * -1) + 'px',
         'transform-origin': '0 ' + ((width_brands / 2) + 2) + 'px',
@@ -134,7 +149,7 @@ $(document).ready(function() {
         });
         if(brand_items == 2){
             $('#circle-brands .circle-item:nth-child(' + i + ') .circle-item-back').css({
-                'width': ((width_brands / 6) * 3.5) + 'px', 
+                'width': ((width_brands / 6) * 3.5) + 'px',
                 'height': ((width_brands / 6) * 3.5) + 'px',
                 'transform': 'rotate(' + calc2 + 'deg) translate(-50%, -50%)'
             });
@@ -150,17 +165,17 @@ $(document).ready(function() {
             }
         }
         $('#circle-brands .circle-item:nth-child(' + i + '):before').css({
-            'margin': (Math.cos(calc) * brand_radius).toFixed() + 'px 0 0 ' + (Math.sin(calc) * brand_radius).toFixed() + 'px' 
-        }); 
+            'margin': (Math.cos(calc) * brand_radius).toFixed() + 'px 0 0 ' + (Math.sin(calc) * brand_radius).toFixed() + 'px'
+        });
 
         width_span = $('#circle-brands .circle-item-text #span-text-' + (i-1) + '').width();
         console.log(width_span);
         $('#circle-brands .circle-item-text #span-text-' + (i-1) + '').css({
             'margin-top': ((width_brands / 4) - $('#circle-brands #span-text-' + (i-1) + '').height() + flag_top) + 'px',
             'margin-left': (((width_brands / 2) - width_span) / 2) + 'px',
-        });      
+        });
     }
-    
+
 
     // Functions to click item circles
     $('#step1').click(function(){
@@ -193,9 +208,48 @@ $(document).ready(function() {
 
     $('#products').hide();
     $('#people').hide();
-    $('#hitch').hide();    
+    $('#hitch').hide();
     $('#times').hide();
     $('#quote-options').hide();
+
+
+    // Prepare and adjust brands circle
+    var width_option = $('#option').width();
+    var scale_outside = (width_option * 30)/100; // aproximadamente 150 web
+
+    var scale_inside = (width_option * 18)/100; // aproximadamente 85 web
+    // var scale_inside = 145; // aproximadamente 85 web
+
+    // var scale_outside = 220;
+    $('#options').css({
+        'width': width_option - scale_outside+ 'px',
+        'height': width_option - scale_outside+ 'px'
+    });
+
+    $('#option div.options-button').css({
+        'width': ((width_option / 3) * 2) - scale_inside + 'px',
+        'height': ((width_option / 3) * 2) - scale_inside + 'px',
+        // 'margin': ((width_option / 3) * -1)  + 'px 0 0 ' + ((width_option / 3) * -1) + 'px'
+        // 'margin-top':((width_option /3 )*-1)
+    });
+
+
+    // $('#option div.options-button>div').css({
+    //     'padding-top': (((width_option / 3) * 2) - $('div.options-button >div').height()) / 2 + 'px'
+    // });
+
+
+    $('#options .circle-item-back').css({
+        'width': ((width_option / 2) + 2) + 'px',
+        'height': ((width_option / 2) + 2) + 'px',
+        'margin-top': (((width_option / 2) + 2) * -1) + 'px',
+        'transform-origin': '0 ' + ((width_option / 2) + 2) + 'px',
+    });
+
+
+
+
+
 
     $('#opt-next').hide();
 
@@ -232,9 +286,19 @@ $(document).ready(function() {
                     `
 
                 }
+
+
+
+
                 $('ul#circle-models div.circle-center').after(options_cars);
                 $("a.model-element").each(function(index) {
                     $(this).on("click", function(){
+
+                        if (isResponsive()) {
+                            $( "#mySidenav" ).show();
+                            openNav();
+                        }
+
                         $("#option-button").show();
                         // car_id
                         $('a.model-element').removeClass('active');
@@ -242,21 +306,46 @@ $(document).ready(function() {
                         // $('#option-button h1').html($(this).attr('name') + ' disponibles');
                         type_car = $(this).attr('id-type');
                         let cars_html = "";
+                        let cars_html_resp = "";
                         for(i = 0; i < cars.length; i++){
                             if(cars[i]['fields']['type'] == type_car){
                                 min_price = cars[i].fields['options'][0]['price']
                                 cars_html += '<h2 class="font-me font-gray car-name" id-car="'+parseInt(cars[i].pk)+'" price="'+min_price+'"> ' + cars[i]['fields']['name'] + '</h2>';
+                                cars_html_resp += '<li><a class="font-me font-gray car-name" id-car="'+parseInt(cars[i].pk)+'" price="'+min_price+'"> ' + cars[i]['fields']['name'] + '</a></li>';
+
+
                             }
-                        }                        
-                        $('#option-button #cars').hide().html(cars_html).fadeIn('slow');
+                        }
+
+                        $("#mySidenav").empty();
+                        $("#mySidenav").append(cars_html_resp);
+                        $("#mySidenav").append('<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>');
+
+
+
+                        if(!isResponsive()){$('#option-button #cars').hide().html(cars_html).fadeIn('slow');}
                         $("h2.car-name").each(function(index){
                             $(this).on('click', function(){
                                 $('#price-model').html($(this).attr('price'));
                                 $('#price-model').formatCurrency();
                                 car_id = $(this).attr('id-car');
-                                $('#opt-next').show();  
+                                $('#opt-next').show();
                             });
                         });
+
+                        $("a.car-name").each(function(index){
+                            $(this).on('click', function(){
+                                $('#price-model').html($(this).attr('price'));
+                                $('#price-model').formatCurrency();
+                                car_id = $(this).attr('id-car');
+                                $('#opt-next').show();
+                            });
+                        });
+
+
+                        $('#opt-next').on('click',function () {
+                            $( "#mySidenav" ).hide();
+                        })
                     });
                 });
 
@@ -268,28 +357,28 @@ $(document).ready(function() {
                 var width_models = $('#modelos').width();
 
                 $('ul.circle#circle-models').css({
-                    'width': width_models + 'px', 
+                    'width': width_models + 'px',
                     'height': width_models + 'px'
                 });
 
                 $('#circle-models div.circle-center').css({
-                    'width': ((width_models / 3) * 2) + 'px', 
+                    'width': ((width_models / 3) * 2) + 'px',
                     'height': ((width_models / 3) * 2) + 'px',
                     'margin': ((width_models / 3) * -1) + 'px 0 0 ' + ((width_models / 3) * -1) + 'px'
                 });
                 $('#circle-models div.circle-center>div').css({
-                    'padding-top': '150px'
+                    'padding-top': '80px',
                     // 'padding-top': (((width_models / 3) * 2) - $('div.circle-center>div').height()) / 2 + 'px'
-                    
+
                 });
                 $('#circle-models .circle-item-back').css({
-                    'width': ((width_models / 2) + 2) + 'px', 
+                    'width': ((width_models / 2) + 2) + 'px',
                     'height': ((width_models / 2) + 2) + 'px',
                     'margin-top': (((width_models / 2) + 2) * -1) + 'px',
                     'transform-origin': '0 ' + ((width_models / 2) + 2) + 'px',
                 });
                 // $('#circle-models .circle-item-text').css({
-                //     'width': (width_models / 2) + 'px', 
+                //     'width': (width_models / 2) + 'px',
                 //     'height': (width_models / 2) + 'px',
                 // });
 
@@ -305,7 +394,7 @@ $(document).ready(function() {
                     });
                     if(model_items == 2){
                         $('#circle-models .circle-item:nth-child(' + i + ') .circle-item-back').css({
-                            'width': ((width_models / 6) * 3.5) + 'px', 
+                            'width': ((width_models / 6) * 3.5) + 'px',
                             'height': ((width_models / 6) * 3.5) + 'px',
                             'transform': 'rotate(' + calc2 + 'deg) translate(-50%, -50%)'
                         });
@@ -321,8 +410,8 @@ $(document).ready(function() {
                         }
                     }
                     $('#circle-models .circle-item:nth-child(' + i + '):before').css({
-                        'margin': (Math.cos(calc) * model_radius).toFixed() + 'px 0 0 ' + (Math.sin(calc) * model_radius).toFixed() + 'px' 
-                    });    
+                        'margin': (Math.cos(calc) * model_radius).toFixed() + 'px 0 0 ' + (Math.sin(calc) * model_radius).toFixed() + 'px'
+                    });
                     width_span = $('#circle-models .circle-item-text #span-text-' + (i-1) + '').width();
                     // console.log(width_span);
                     flag_adjust = ((model_items >= 4) ? model_items - 4 : 0);
@@ -331,7 +420,7 @@ $(document).ready(function() {
                     $('#circle-models .circle-item-text #span-text-' + (i-1) + '').css({
                         'margin-top': ((width_brands / 4) - $('#circle-models #span-text-' + (i-1) + '').height() + adjust + flag_top) + 'px',
                         'margin-left': (((width_brands / 2) - width_span) / 2) + 'px',
-                    });        
+                    });
                 }
             }else{
                 sweetAlert({
@@ -354,14 +443,14 @@ $(document).ready(function() {
         //     $("#plan option:first").attr('selected', 'selected');
         // });
         // if(cars.length > 0){
-            $('#brand-name').html(brand_name);
-            $("#brands").hide();
-            $("#modelos").show();
-            // $("#option-button").show();
-            $("#step1").removeClass('active');
-            $("#step1").addClass('complete');
-            $("#step2").removeClass('disabled');
-            $("#step2").addClass('active');
+        $('#brand-name').html(brand_name);
+        $("#brands").hide();
+        $("#modelos").show();
+        // $("#option-button").show();
+        $("#step1").removeClass('active');
+        $("#step1").addClass('complete');
+        $("#step2").removeClass('disabled');
+        $("#step2").addClass('active');
         // }
     });
 
@@ -373,15 +462,19 @@ $(document).ready(function() {
                 console.log(cars[i])
                 for(j=0; j < cars[i]['fields']['options'].length; j++){
                     if(cars[i]['fields']['options'][j]['model'] == '2017'){
-                        packages_html += '<p value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'
+                        packages_html += '<p style="cursor: pointer" value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'
                     }else if(cars[i]['fields']['options'][j]['model'] == '2016'){
-                        packages_html += '<p value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'                        
+                        packages_html += '<p style="cursor: pointer value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'
                     }else if(cars[i]['fields']['options'][j]['model'] == '2015'){
-                        packages_html += '<p value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'                        
+                        packages_html += '<p style="cursor: pointer value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'
                     }
                 }
             }
         }
+
+
+
+
         $('#packages div').after(packages_html);
         $(".package").click(function(){
             $("#option-detail").html("");
@@ -444,13 +537,20 @@ $(document).ready(function() {
         $('#times-nav').addClass('active');
     });
 
+    $(".bs-wizard").click(function() {
+        $("#quote-circle").hide();
+        $("#quote-info").hide();
+        hitch = $('#porcentage').val();
+    });
+
+
     $(".time").click(function(){
-        time = $(this).attr('value');        
+        time = $(this).attr('value');
         time_name = $(this).attr('value-name');
         let car_select, package_select;
 
         // package_id
-        
+
         for(i=0; i < cars.length; i++){
             if(car_id == cars[i].pk){
                 car_select = cars[i];
@@ -465,7 +565,7 @@ $(document).ready(function() {
         }
         console.log(car_select);
         console.log(package_select);
-        
+
         $('#rbrand').html(brand_name);
         $('#rmodel').html(car_select['fields'].name);
         $('#ryear').html(package_select.model);

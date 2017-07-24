@@ -1,286 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Incredit website">
-        <meta name="author" content="Carlos Salgado">
-        <!--<link rel="icon" href="">-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Incredit website">
+    <meta name="author" content="Carlos Salgado">
+    <!--<link rel="icon" href="">-->
 
-        <title>IN-CREDIT COTIZADOR</title>
+    <title>IN-CREDIT COTIZADOR</title>
 
-        {% load static %}
-        <!-- Bootstrap CSS -->
-        <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
 
-        <!-- Custom styles -->
-        <link href="{% static "css/sweetalert.css" %}" rel="stylesheet">
-        <link href="{% static "css/style.css" %}" rel="stylesheet">
-        <link href="{% static "css/cotizador2.css" %}" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="{% static "css/sweetalert.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/cotizador2.css" %}" rel="stylesheet">
 
-        <script src="{% static "js/sweetalert.min.js" %}"></script>
-    </head>
+    <script src="{% static "js/sweetalert.min.js" %}"></script>
+</head>
 
-    <body style="overflow-x: hidden;">
+<body style="overflow-x: hidden;">
 
-    <div class="navbar-wrapper" style="margin-top:0px; background-color:#2B2C2D;">
-        <div class="container">
-            <nav class="navbar navbar-inverse navbar-static-top menu-incredit" style="height:0;">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#" style="padding: 5px 15px;">
-                            <img class="logo-menu2" src="{% static "img/logo.png" %}" width="10px">
-                        </a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right font-mb font-nav" style="margin-top: 10px;">
-                            <li><a href="/#nosotros">Nosotros</a></li>
-                            <li><a href="http://produccion.anfexi.com/Incredit/SAC/" target="_blank">Distribuidores</a></li>
-                            <li><a href="http://produccion.anfexi.com/Incredit/PortalCliente/Account/Log/In" target="_blank">Clientes</a></li>
-                            <li><a href="/cotizador2/">Cotizador</a></li>
-                            <li><a href="/#financiamiento">Productos</a></li>
-                        </ul>
-                    </div>
+<div class="navbar-wrapper" style="margin-top:0px; background-color:#2B2C2D;">
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top menu-incredit" style="height:0;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="padding: 5px 15px;">
+                        <img class="logo-menu2" src="{% static "img/logo.png" %}" width="10px">
+                    </a>
                 </div>
-            </nav>
-        </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right font-mb font-nav" style="margin-top: 10px; background-color:#2B2C2D; opacity: 0.7">
+                        <li><a href="/#nosotros">Nosotros</a></li>
+                        <li><a href="http://produccion.anfexi.com/Incredit/SAC/" target="_blank">Distribuidores</a></li>
+                        <li><a href="http://produccion.anfexi.com/Incredit/PortalCliente/Account/Log/In" target="_blank">Clientes</a></li>
+                        <li><a href="/cotizador2/">Cotizador</a></li>
+                        <li><a href="/#financiamiento">Productos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
+</div>
 
-    <section class="cotizador">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-offset-2 col-lg-6 col-md-offset-1 col-md-6 col-sm-8" id="brands">
-                    <ul id="circle-brands" class="circle" number="{{ brands|length }}">
-                        <div class="circle-center">
-                            <div>
-                                <h1 class="font-me font-gray">MARCA</h1>
-                                <p class="font-rr font-gray" style="font-size:0.6em;">Elige la marca de tu preferencia</p>
-                            </div>
+
+
+
+
+
+<section class="cotizador" id="cotizador">
+    <div class="container">
+        <div id="mySidenav" class="sidenav">
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-offset-s2 col-lg-6 col-md-offset-1 col-md-6 col-sm-8" id="brands">
+                <ul id="circle-brands" class="circle" number="{{ brands|length }}">
+                    <div class="circle-center">
+                        <div>
+                            <h1 class="font-me font-gray">MARCA</h1>
+                            <p class="font-rr font-gray" style="font-size:0.6em;">Elige la marca de tu preferencia</p>
                         </div>
-                        {% for brand in brands %}
-                            <li class="circle-item">
-                                <a class="circle-item-back brand-option" id="{{ brand.id }}" name="{{ brand.name }}">
-                                    <div class="circle-item-text">
+                    </div>
+                    {% for brand in brands %}
+                        <li class="circle-item">
+                            <a class="circle-item-back brand-option" id="{{ brand.id }}" name="{{ brand.name }}">
+                                <div class="circle-item-text">
                                         <span class="font-rr font-white" id="span-text-{{ forloop.counter }}" style="left:0;">
                                             {{ brand.name }}
                                         </span>
-                                    </div>   
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-                <div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-8" id="modelos">
-                    <ul class="circle" id="circle-models">
-                        <div class="circle-center">
-                            <div>
-                                <h1 class="font-mr font-gray" id="brand-name"></h1>
-                                <p class="font-rr font-gray" style="font-size:0.6em;">Elige un tipo de carro</p>                                
-                                <p class="font-rr font-blue" style="font-size:1em;" id="price-model">-</p>
-                                <!--<br>
-                                <select name="year" id="year" style="color:#2B2C2D; background-color:transparent; font-size:0.8em; border-color:transparent;">
-                                    <option value="2017">| 2 | 0 | 1 | 7 |</option>
-                                    <option value="2017">| 2 | 0 | 1 | 6 |</option>
-                                </select>-->
-                            </div>
-                        </div>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-4 col-md-4 col-sm-10" id="option-button">
-                    <!-- <h1 class="font-me font-gray"></h1> 
-                    <br> -->
-                    <div id="cars">
-
-                    </div>
-                    <br>
-                    <a href="#options"><button id="opt-next">SIGUIENTE</button></a> 
-                </div>
-
-
-
-                <div class="col-lg-offset-1 col-lg-5 col-md-5 col-sm-8" id="option" style="margin-top:6em;">
-                    <ul id="options">
-                        <div class="options-button" style="text-decoration:none">
-
-
-                                <div style="width:100%; height:100%; padding-top:1.5em;" id="packages">
-                                    <div>
-                                        <!-- <p value="D" id="package" class="package font-mr font-gray">D</p>
-                                        <br>
-                                        <p value="L" id="package" class="package font-mr font-gray">L</p>
-                                        <br>
-                                        <p value="M" id="package" class="package font-mr font-gray">M</p>
-                                        <br>
-                                        <p value="C" id="package" class="package font-mr font-gray">C</p> -->
-                                    </div>
                                 </div>
-
-                                <div style="width:100%; height:100%; padding-top:4.5em;" id="products">
-                                    <p value="1" value-name="Crédito Automotriz" id="product" class="product font-mr font-gray">Crédito Automotriz</p>
-                                    <br>
-                                    <!-- <p value="2" id="product" class="product font-mr font-gray">Arrendamiento Puro</p> -->
-                                </div>
-
-                                <div style="width:100%; height:100%; padding-top:2.5em;" id="people">
-                                    <p value="1" value-name="Persona física" id="person" class="person font-mr font-gray">Persona Física</p>
-                                    <br>
-                                    <p value="2" value-name="Persona Física con Actividad Empresarial" id="person" class="person font-mr font-gray">Persona Física con Actividad Empresarial</p>
-                                    <br>
-                                    <p value="3" value-name="Persona Moral" id="person" class="person font-mr font-gray">Persona Moral</p>
-                                </div>
-
-                                <div style="width:100%; height:100%; padding-top:2.5em;" id="hitch">
-                                    <p class="font-mr font-gray">Elige el porcentaje</p>
-                                    <select name="porcentage" id="porcentage">
-                                        <option value="15">15 %</option>
-                                        <option value="25">25 %</option>
-                                        <option value="35">35 %</option>
-                                        <option value="45">45 %</option>
-                                        <option value="55">55 %</option>
-                                    </select>
-                                    <hr style="border-top: 3px solid #5E5E5E; width:4em; margin-top: 2px; margin-bottom: 5px;">
-                                    <p class="font-mr font-gray">ó <br> Determina el monto</p>
-                                    <label><span class="font-mr font-gray" style="font-weight: 100; text-align:center">Monto: </span><input type="text" name="amount" id="amount" value="50,000"></label>
-                                    <center><p id="hitch-next" class="font-rr" style="border-top: 1px solid #40689B; border-bottom: 1px solid #40689B; color: #40689B; margin-top: 0.5em; width: 5em;">Siguiente</p></center>
-                                </div>
-
-                                <div style="width:100%; height:100%; padding-top:1.5em;" id="times">
-                                    <div>
-                                        <p value="12" value-name="12 meses" id="time" class="time font-mr font-gray">12 meses</p>
-                                        <br>
-                                        <p value="24" value-name="24 meses" id="time" class="time font-mr font-gray">24 meses</p>
-                                        <br>
-                                        <p value="36" value-name="36 meses" id="time" class="time font-mr font-gray">36 meses</p>
-                                        <br>
-                                        <p value="48" value-name="48 meses" id="time" class="time font-mr font-gray">48 meses</p>
-                                    </div>
-                                </div>
-
-                        </div>
-                        <!--<a class="menu-button icon-minus" href="#" title="Hide navigation"></a>-->
-                        <li class="options-item">
-                            <a class="options-item-back active" id="packages-nav">
-                                <div style="    
-    position: relative;
-    background-color: transparent;
-    /* bottom: -2.5em; */
-    display: block;
-    width: 300px;
-    height: 300px;
-    -webkit-transform: skew(1deg) rotate(43deg) scale(1);
-    -moz-transform: skew(1deg) rotate(43deg) scale(1);
-    -ms-transform: skew(1deg) rotate(43deg) scale(1);
-    transform: skew(1deg) rotate(43deg) scale(1);
-    ">
-            <span class="font-rr font-white" style="margin-top: 44%;
-    left: 40%; position: absolute; font-size:0.8em;">Paquete</span>
-                                </div>
-                                
                             </a>
                         </li>
-                        <li class="options-item"><a class="options-item-back" id="products-nav" href="#options">
-                            <div style="    
-    position: relative;
-    background-color: transparent;
-    /* bottom: -2.5em; */
-    display: block;
-    width: 300px;
-    height: 300px;
-    -webkit-transform: skew(1deg) rotate(47deg) scale(1);
-    -moz-transform: skew(1deg) rotate(47deg) scale(1);
-    -ms-transform: skew(1deg) rotate(47deg) scale(1);
-    transform: skew(1deg) rotate(47deg) scale(1);
-    ">
-<span class="font-rr font-white" style="margin-top: 40%;
-    left: 42%; position: absolute; font-size:0.8em;">Tipo de <br> producto</span>
-                                </div></a></li>
-                        <li class="options-item"><a class="options-item-back" id="people-nav" href="#options">
-                            
-                            
-                            <div style="    
-    position: relative;
-    background-color: transparent;
-    /* bottom: -2.5em; */
-    display: block;
-    width: 300px;
-    height: 300px;
-    -webkit-transform: skew(1deg) rotate(43deg) scale(1);
-    -moz-transform: skew(1deg) rotate(43deg) scale(1);
-    -ms-transform: skew(1deg) rotate(43deg) scale(1);
-    transform: skew(1deg) rotate(43deg) scale(1);
-    ">
-<span class="font-rr font-white" style="margin-top: 40%;
-    left: 35%; position: absolute; font-size:0.8em;">Tipo de <br> persona</span>
-                                </div>
-                            </a></li>
-                        <li class="options-item"><a class="options-item-back" id="hitch-nav" href="#options">
-                            
-                            <div style="    
-    position: relative;
-    background-color: transparent;
-    /* bottom: -2.5em; */
-    display: block;
-    width: 300px;
-    height: 300px;
-    -webkit-transform: skew(1deg) rotate(43deg) scale(1);
-    -moz-transform: skew(1deg) rotate(43deg) scale(1);
-    -ms-transform: skew(1deg) rotate(43deg) scale(1);
-    transform: skew(1deg) rotate(43deg) scale(1);
-    ">
-<span class="font-rr font-white" style="margin-top: 45%;
-    left: 40%; position: absolute; font-size:0.8em;">Enganche</span>
-                                </div>
-                            
-                            </a></li>
-                        <li class="options-item"><a class="options-item-back" id="times-nav" href="#options">
-                            
-                            
-<div style="    
-    position: relative;
-    background-color: transparent;
-    /* bottom: -2.5em; */
-    display: block;
-    width: 300px;
-    height: 300px;
-    -webkit-transform: skew(1deg) rotate(43deg) scale(1);
-    -moz-transform: skew(1deg) rotate(43deg) scale(1);
-    -ms-transform: skew(1deg) rotate(43deg) scale(1);
-    transform: skew(1deg) rotate(43deg) scale(1);
-    ">
-<span class="font-rr font-white" style="margin-top: 45%;
-    left: 42%; position: absolute; font-size:0.8em;">Plazo</span>
-                                </div>
+                    {% endfor %}
+                </ul>
+            </div>
 
-                            </a></li>
-                        <!--<li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>
-                        <li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>
-                        <li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>
-                        <li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>
-                        <li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>-->
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-md-7 col-sm-10" id="option-detail" style="margin-top:8em;">
-                    
-                
-                </div>
-
-
-                <div class="col-lg-offset-2 col-lg-6 col-md-6 col-sm-8" id="quote-circle" style="margin-top:6em;">
-                    <div style="text-align:center; " id="quote">
-                         <center>
-                            <h1 id="cotizar" style="padding-top: 180px;">COTIZAR</h1>
-                        </center> 
+            <div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-8" id="modelos">
+                <ul class="circle" id="circle-models">
+                    <div class="circle-center">
+                        <div>
+                            <h1 class="font-mr font-gray" id="brand-name"></h1>
+                            <p class="font-rr font-gray" style="font-size:0.6em;">Elige un tipo de carro</p>
+                            <p class="font-rr font-blue" style="font-size:1em;" id="price-model">-</p>
+                            <!--<br>
+                            <select name="year" id="year" style="color:#2B2C2D; background-color:transparent; font-size:0.8em; border-color:transparent;">
+                                <option value="2017">| 2 | 0 | 1 | 7 |</option>
+                                <option value="2017">| 2 | 0 | 1 | 6 |</option>
+                            </select>-->
+                        </div>
                     </div>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-10" id="option-button">
+                <!-- <h1 class="font-me font-gray"></h1>
+                <br> -->
+                <div id="cars">
+
                 </div>
+                <br>
+                <a href="#options"><button id="opt-next">SIGUIENTE</button></a>
+            </div>
+
+            <div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-8" id="option" style="margin-top:6em;">
+                <ul id="options" class="circle">
+                    <div class="options-button" style="text-decoration:none">
+                        <div style="width:100%; height:100%; padding-top:2.5em;" id="packages">
+                            <div>
+{#                                                           <p value="D" id="package" class="package font-mr font-gray">D</p>#}
+{#                                                            <br>#}
+{#                                                            <p value="L" id="package" class="package font-mr font-gray">L</p>#}
+{#                                                            <br>#}
+{#                                                            <p value="M" id="package" class="package font-mr font-gray">M</p>#}
+{#                                                            <br>#}
+{#                                                            <p value="C" id="package" class="package font-mr font-gray">C</p>#}
+                            </div>
+                        </div>
+
+                        <div style="width:100%; height:100%; padding-top:4.5em;" id="products">
+                            <p value="1" style="cursor: pointer" value-name="Crédito Automotriz" id="product" class="product font-mr font-gray">Crédito Automotriz</p>
+                            <br>
+                            <!-- <p value="2" id="product" class="product font-mr font-gray">Arrendamiento Puro</p> -->
+                        </div>
+
+                        <div style="width:100%; height:100%; padding-top:2.5em;  cursor: pointer" id="people">
+                            <p value="1" style="cursor: pointer" value-name="Persona física" id="person" class="person font-mr font-gray">Persona Física</p>
+                            <br>
+                            <p value="2" style="cursor: pointer" value-name="Persona Física con Actividad Empresarial" id="person" class="person font-mr font-gray">Persona Física con Actividad Empresarial</p>
+                            <br>
+                            <p value="3" style="cursor: pointer" value-name="Persona Moral" id="person" class="person font-mr font-gray">Persona Moral</p>
+                        </div>
+
+                        <div style="width:100%; height:100%; padding-top:2.5em;" id="hitch">
+                            <p class="font-mr font-gray">Elige el porcentaje</p>
+                            <select name="porcentage" id="porcentage">
+                                <option value="15">15 %</option>
+                                <option value="25">25 %</option>
+                                <option value="35">35 %</option>
+                                <option value="45">45 %</option>
+                                <option value="55">55 %</option>
+                            </select>
+                            <hr style="border-top: 3px solid #5E5E5E; width:4em; margin-top: 2px; margin-bottom: 5px;">
+                            <p class="font-mr font-gray">ó <br> Determina el monto</p>
+                            <label><span class="font-mr font-gray" style="font-weight: 100; text-align:center">Monto: </span><input type="text" name="amount" id="amount" value="50,000"></label>
+                            <center><p id="hitch-next" class="font-rr" style="cursor:pointer;border-top: 1px solid #40689B; border-bottom: 1px solid #40689B; color: #40689B; margin-top: 0.5em; width: 5em;">Siguiente</p></center>
+                        </div>
+
+                        <div style="width:100%; height:100%; padding-top:1.5em;" id="times">
+                            <div>
+                                <p value="12" style="cursor: pointer" value-name="12 meses" id="time" class="time font-mr font-gray">12 meses</p>
+                                <br>
+                                <p value="24" style="cursor: pointer" value-name="24 meses" id="time" class="time font-mr font-gray">24 meses</p>
+                                <br>
+                                <p value="36" style="cursor: pointer" value-name="36 meses" id="time" class="time font-mr font-gray">36 meses</p>
+                                <br>
+                                <p value="48" style="cursor: pointer" value-name="48 meses" id="time" class="time font-mr font-gray">48 meses</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--<a class="menu-button icon-minus" href="#" title="Hide navigation"></a>-->
+
+                    <li class="options-item">
+                        <a class="options-item-back active" id="packages-nav">
+                            <div style="
+                                        position: relative;
+                                        background-color: transparent;
+                                        /* bottom: -2.5em; */
+                                        display: block;
+                                        width: 300px;
+                                        height: 300px;
+                                        -webkit-transform: skew(1deg) rotate(43deg) scale(1);
+                                        -moz-transform: skew(1deg) rotate(43deg) scale(1);
+                                        -ms-transform: skew(1deg) rotate(43deg) scale(1);
+                                        transform: skew(1deg) rotate(43deg) scale(1);
+                                        cursor: pointer;">
+                            <span class="font-rr font-white" style="margin-top: 44%;
+                            left: 40%; position: absolute; font-size:0.8em; ">Paquete</span>
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <li class="options-item">
+                        <a class="options-item-back" id="products-nav" href="#options">
+                            <div style="
+        position: relative;
+        background-color: transparent;
+        /* bottom: -2.5em; */
+        display: block;
+        width: 300px;
+        height: 300px;
+        -webkit-transform: skew(1deg) rotate(47deg) scale(1);
+        -moz-transform: skew(1deg) rotate(47deg) scale(1);
+        -ms-transform: skew(1deg) rotate(47deg) scale(1);
+        transform: skew(1deg) rotate(47deg) scale(1);
+        ">
+                            <span class="font-rr font-white" style="margin-top: 40%;
+        left: 42%; position: absolute; font-size:0.8em;">Tipo de <br> producto</span>
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <li class="options-item">
+                        <a class="options-item-back" id="people-nav" href="#options">
+                            <div style="
+        position: relative;
+        background-color: transparent;
+        /* bottom: -2.5em; */
+        display: block;
+        width: 300px;
+        height: 300px;
+        -webkit-transform: skew(1deg) rotate(43deg) scale(1);
+        -moz-transform: skew(1deg) rotate(43deg) scale(1);
+        -ms-transform: skew(1deg) rotate(43deg) scale(1);
+        transform: skew(1deg) rotate(43deg) scale(1);
+        ">
+                                <span class="font-rr font-white" style="margin-top: 40%;
+        left: 35%; position: absolute; font-size:0.8em;">Tipo de <br> persona</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="options-item"><a class="options-item-back" id="hitch-nav" href="#options">
+                        <div style="
+    position: relative;
+    background-color: transparent;
+    /* bottom: -2.5em; */
+    display: block;
+    width: 300px;
+    height: 300px;
+    -webkit-transform: skew(1deg) rotate(43deg) scale(1);
+    -moz-transform: skew(1deg) rotate(43deg) scale(1);
+    -ms-transform: skew(1deg) rotate(43deg) scale(1);
+    transform: skew(1deg) rotate(43deg) scale(1);
+    ">
+                            <span class="font-rr font-white" style="margin-top: 45%;
+                                    left: 40%; position: absolute; font-size:0.8em;">Enganche</span>
+                        </div>
+                    </a>
+                    </li>
+
+
+                    <li class="options-item">
+                        <a class="options-item-back" id="times-nav" href="#options">
+                            <div style="
+        position: relative;
+        background-color: transparent;
+        /* bottom: -2.5em; */
+        display: block;
+        width: 300px;
+        height: 300px;
+        -webkit-transform: skew(1deg) rotate(43deg) scale(1);
+        -moz-transform: skew(1deg) rotate(43deg) scale(1);
+        -ms-transform: skew(1deg) rotate(43deg) scale(1);
+        transform: skew(1deg) rotate(43deg) scale(1);
+        ">
+                                <span class="font-rr font-white" style="margin-top: 45%;
+        left: 42%; position: absolute; font-size:0.8em;">Plazo</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!--<li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>
+                    <li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>
+                    <li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>
+                    <li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>
+                    <li class="menu-item"><a class="menu-item-back" href="#menu"></a></li>-->
+                </ul>
+            </div>
+
+            <div class="col-lg-6 col-md-7 col-sm-10" id="option-detail" style="margin-top:8em;">
+
+
+            </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-8" id="quote-info2" style="margin-top:6em;">
                     <h1 class="font-me font-gray">RESUMEN</h1>
@@ -317,8 +322,39 @@
                             El Crédito Automotriz y el Arrendamiento Puro, puede implicar la contratación de productos o servicios adicionales; para mayor información visita a tu Distribuidor.
                         </p>
                     </div>
-                </div>
+            <div class="col-lg-offset-2 col-lg-6 col-md-6 col-sm-8" id="quote-circle" style="margin-top:6em;">
+                <div style="text-align:center; " id="quote">
+                    <center>
+                        <h1 id="cotizar" style="padding-top: 180px;cursor: pointer">COTIZAR</h1>
+                    </center>
 
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-8" id="quote-info" style="margin-top:6em;">
+                <h1 class="font-me font-gray">RESUMEN</h1>
+                <p style="padding-left:2em;" class="font-rr">
+                    <span id="rbrand"></span>
+                    <br>
+                    <span id="rmodel"></span>
+                    <br>
+                    <span id="ryear"></span>
+                    <br>
+                    <span id="rprice"></span>
+                    <br>
+                    <span id="rhitch"></span>
+                    <br>
+                    <span id="rproduct"></span>
+                    <br>
+                    <span id="rpeople"></span>
+                    <br>
+                    Plan IN Credit
+                    <br>
+                    Paquete <span id="rpackage"></span>
+                    <br>
+                    <span id="rtime"></span>
+                </p>
+            </div>
 
 
 
@@ -385,88 +421,90 @@
 
                 
             </div>
+        </div>
 
 
-            <div class="row">
 
-                <div class="col-lg-offset-2 col-lg-8">
-<div class="row bs-wizard" style="border-bottom:0;">
+        <div class="row">
+
+            <div class="col-lg-offset-2 col-lg-8">
+                <div class="row bs-wizard" style="border-bottom:0;">
 
                     <div class="col-xs-4 bs-wizard-step active" id="step1">
-                  <div class="text-center bs-wizard-stepnum">1</div>
-                  <div class="progress"><div class="progress-bar"></div></div>
-                  <a href="#" class="bs-wizard-dot"></a>
-                </div>
-                
-                <div class="col-xs-4 bs-wizard-step disabled" id="step2"><!-- complete -->
-                  <div class="text-center bs-wizard-stepnum">2</div>
-                  <div class="progress"><div class="progress-bar"></div></div>
-                  <a href="#" class="bs-wizard-dot"></a>
-                </div>
-                
-                <div class="col-xs-4 bs-wizard-step disabled" id="step3"><!-- complete -->
-                  <div class="text-center bs-wizard-stepnum">3</div>
-                  <div class="progress"><div class="progress-bar"></div></div>
-                  <a href="#" class="bs-wizard-dot"></a>
-                </div>
-                
-                <!--<div class="col-xs-3 bs-wizard-step disabled">
-                  <div class="text-center bs-wizard-stepnum">Step 4</div>
-                  <div class="progress"><div class="progress-bar"></div></div>
-                  <a href="#" class="bs-wizard-dot"></a>
-                  <div class="bs-wizard-info text-center"> Curabitur mollis magna at blandit vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</div>
-                </div>-->
+                        <div class="text-center bs-wizard-stepnum">1</div>
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#" class="bs-wizard-dot"></a>
+                    </div>
 
-</div>
+                    <div class="col-xs-4 bs-wizard-step disabled" id="step2"><!-- complete -->
+                        <div class="text-center bs-wizard-stepnum">2</div>
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#" class="bs-wizard-dot"></a>
+                    </div>
+
+                    <div class="col-xs-4 bs-wizard-step disabled" id="step3"><!-- complete -->
+                        <div class="text-center bs-wizard-stepnum">3</div>
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#" class="bs-wizard-dot"></a>
+                    </div>
+
+                    <!--<div class="col-xs-3 bs-wizard-step disabled">
+                      <div class="text-center bs-wizard-stepnum">Step 4</div>
+                      <div class="progress"><div class="progress-bar"></div></div>
+                      <a href="#" class="bs-wizard-dot"></a>
+                      <div class="bs-wizard-info text-center"> Curabitur mollis magna at blandit vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</div>
+                    </div>-->
+
                 </div>
-                
-                
             </div>
-
 
 
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer style="padding-top:2em; padding-bottom:2em;">
-        <center>
-            <p class="font-mt font-white" style="font-size:1.1em; margin-bottom:2em;"><a href="/aviso/">Aviso de privacidad</a> - <a href="/une/">UNE</a> - <a href="/buro/">Buró de Entidades Financieras</a> - <a href="{% static "docs/terminos_condiciones.pdf" %}" target="_blank">Términos y Condiciones</a> - <a href="{% static "docs/educacion_financiera.pdf" %}" target="_blank">Finanzas Personales</a> - <a href="https://grupo.lmsmexico.com.mx/incredit/">Seguros</a> - <a href="/documentacion/">Documentación</a></p>
-            <div class="row">
-                <div class="col-lg-5 col-md-5">
-                    <p class="font-mt font-white" style="font-size:1.1em;">
-                        01 800 4627 3348
-                        <br>
-                        (55) 4161 4080
-                        <br>
-                        servicioacliente@in-credit.com.mx
-                    </p>
-                </div>
-                <div class="col-lg-2 col-md-2">
-                    <img src="{% static "img/logo.png" %}">
-                </div>
-                <div class="col-lg-5 col-md-5">
-                    <p class="font-mt font-white" style="font-size:1.1em;">
-                        Su Servicio Financiero SA de CV SOFOM ENR
-                        <br>
-                        Paseo de las Palmas 735, piso 15
-                        <br>
-                        Lomas de Chapultepec, CP 11000
-                        <br>
-                        Ciudad de México
-                    </p>
-                </div>
+
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="padding-top:2em; padding-bottom:2em;">
+    <center>
+        <p class="font-mt font-white" style="font-size:1.1em; margin-bottom:2em;"><a href="/aviso/">Aviso de privacidad</a> - <a href="/une/">UNE</a> - <a href="/buro/">Buró de Entidades Financieras</a> - <a href="{% static "docs/terminos_condiciones.pdf" %}" target="_blank">Términos y Condiciones</a> - <a href="{% static "docs/educacion_financiera.pdf" %}" target="_blank">Finanzas Personales</a> - <a href="https://grupo.lmsmexico.com.mx/incredit/">Seguros</a> - <a href="/documentacion/">Documentación</a></p>
+        <div class="row">
+            <div class="col-lg-5 col-md-5">
+                <p class="font-mt font-white" style="font-size:1.1em;">
+                    01 800 4627 3348
+                    <br>
+                    (55) 4161 4080
+                    <br>
+                    servicioacliente@in-credit.com.mx
+                </p>
             </div>
-            
-        </center>    
-    </footer>
+            <div class="col-lg-2 col-md-2">
+                <img src="{% static "img/logo.png" %}">
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <p class="font-mt font-white" style="font-size:1.1em;">
+                    Su Servicio Financiero SA de CV SOFOM ENR
+                    <br>
+                    Paseo de las Palmas 735, piso 15
+                    <br>
+                    Lomas de Chapultepec, CP 11000
+                    <br>
+                    Ciudad de México
+                </p>
+            </div>
+        </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{% static "js/vendor/jquery.min.js" %}"><\/script>')</script>
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
-    <script src="{% static "js/jquery.lettering.js" %}"></script>
-    <script src="{% static "js/jquery.formatCurrency.min.js" %}"></script>
-    <script src="{% static "js/circleText.js" %}"></script>
-    <script src="{% static "js/cotizador2.js" %}"></script>
-  </body>
+    </center>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{% static "js/vendor/jquery.min.js" %}"><\/script>')</script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/jquery.lettering.js" %}"></script>
+<script src="{% static "js/jquery.formatCurrency.min.js" %}"></script>
+<script src="{% static "js/circleText.js" %}"></script>
+<script src="{% static "js/cotizador2.js" %}"></script>
+</body>
 </html>
