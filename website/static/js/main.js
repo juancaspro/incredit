@@ -170,6 +170,7 @@ $(document).ready(function() {
         let email = $('#email');
         let city = $('#city');
         let client = $('#client');
+        let noClient = $('#noClient');
         let contract = $('#contract');
         let service = $('#service');
         let accept = $('#accept');
@@ -214,7 +215,8 @@ $(document).ready(function() {
             city.removeClass('input-error');
             $('#city-error').hide();
         }
-        if(!client.is(':checked')){
+
+        if(!client.is(':checked') && !noClient.is(':checked')){
             client.addClass('input-error');
             $('#client-error').show();
             flag_send = false;                        
@@ -222,7 +224,7 @@ $(document).ready(function() {
             client.removeClass('input-error');
             $('#client-error').hide();
         }
-        if(contract.val() == ""){
+        if(contract.val() == "" && !noClient.is(':checked')){
             contract.addClass('input-error');
             $('#contract-error').show();
             flag_send = false;                        
