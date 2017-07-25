@@ -648,12 +648,33 @@ $(document).ready(function() {
                 $("#mySidenav").append('<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>');
 
                 $( "#mySidenav").show();
-                // openNav();
+                openNav();
             }else{
                 $('#products div').after(products_html);
             }
 
+            $(".product").click(function(){
+                product = $(this).attr('value');
+                product_name = $(this).attr('value-name');
+                $('#products').fadeOut();
+                $('#people').fadeIn(2000);
+                $('#products-nav').removeClass('active');
+                $('#people-nav').addClass('active');
+
+                $("#resume-container").append('<span id="rproduct"></span><br>');
+                $('#rproduct').html(product_name);
+            });
+
+
+
+
+
+
         });
+
+
+
+
         $(".package").mouseout(function() {
             $("#option-detail").html("");
             $("#option-detail").hide();
@@ -668,24 +689,6 @@ $(document).ready(function() {
         $("#step2").addClass('complete');
         $("#step3").removeClass('disabled');
         $("#step3").addClass('active');
-
-
-    });
-
-
-
-
-    $(".product").click(function(){
-        product = $(this).attr('value');
-        product_name = $(this).attr('value-name');
-        $('#products').fadeOut();
-        $('#people').fadeIn(2000);
-        $('#products-nav').removeClass('active');
-        $('#people-nav').addClass('active');
-
-
-        $("#resume-container").append('<span id="rproduct"></span><br>');
-        $('#rproduct').html(product_name);
 
 
     });
