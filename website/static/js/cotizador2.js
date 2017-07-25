@@ -433,6 +433,10 @@ $(document).ready(function() {
                                 $('#price-model').formatCurrency();
                                 car_id = $(this).attr('id-car');
                                 $('#opt-next').show();
+
+                                $("#mySidenav").hide();
+                                closeNav();
+
                             });
                         });
 
@@ -442,6 +446,9 @@ $(document).ready(function() {
                                 $('#price-model').formatCurrency();
                                 car_id = $(this).attr('id-car');
                                 $('#opt-next').show();
+
+                                $("#mySidenav").hide();
+                                closeNav();
                             });
                         });
 
