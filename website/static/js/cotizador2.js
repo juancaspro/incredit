@@ -622,7 +622,6 @@ $(document).ready(function() {
         }
 
 
-
         $(".package").click(function(){
             $("#option-detail").html("");
             $("#option-detail").hide();
@@ -666,14 +665,7 @@ $(document).ready(function() {
             });
 
 
-
-
-
-
         });
-
-
-
 
         $(".package").mouseout(function() {
             $("#option-detail").html("");
@@ -689,11 +681,7 @@ $(document).ready(function() {
         $("#step2").addClass('complete');
         $("#step3").removeClass('disabled');
         $("#step3").addClass('active');
-
-
     });
-
-
 
     var person_html = '<p value="1" style="cursor: pointer" value-name="Persona física" id="person" class="person font-mr font-gray">Persona Física</p> <br> \
                        <p value="2" style="cursor: pointer" value-name="Persona Física con Actividad Empresarial" id="person" class="person font-mr font-gray">Persona Física con Actividad Empresarial</p> <br>\
@@ -830,7 +818,7 @@ $(document).ready(function() {
             }
         }
         console.log(car_select);
-        console.log(package_select);
+        console.log( 'package_select : -- ' + package_select.model);
 
         $("#resume-container").append('<span id="rmodel"></span><br>');
         $("#resume-container").append('<span id="ryear"></span><br>');
