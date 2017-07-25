@@ -74,7 +74,7 @@ def quote(request):
             'cotizador.html'
         )
 
-    
+
 def quote2(request):
     if request.method == "GET":
         brands = Brand.objects.filter(is_active=True)
@@ -83,7 +83,7 @@ def quote2(request):
             'cotizador3.html',
             {
                 'brands': brands
-                # 'brands': serializers.serialize('json', brands)                
+                # 'brands': serializers.serialize('json', brands)
             }
         )
 
@@ -100,4 +100,24 @@ def quote_dev(request):
             }
         )
 
-    
+
+def generate_table(request):
+    if request.method == "GET":
+        print(request.GET['data'])
+
+        return render(
+            request,
+            'table.html',
+            {
+                'pays': json.loads(request.GET['data'])
+            }
+        )
+
+def generate_pdf(request):
+    if request.method == "GET":
+        return render_to_pdf(
+            'table.html',
+            {
+                'pays': json.loads(request.GET['data'])
+            }
+        )
