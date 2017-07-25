@@ -198,7 +198,7 @@ $(document).ready(function() {
             number.removeClass('input-error');
             $('#number-error').hide();
         }
-        if(email.val() == ""){
+        if(email.val() == "" || email.val().length > 50){
             email.addClass('input-error');
             $('#email-error').show();
             flag_send = false;                        
