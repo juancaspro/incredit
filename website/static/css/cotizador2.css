@@ -412,7 +412,9 @@
 .options-item:nth-child(6):before {
   margin: -33.99187px 0 0 -104.61622px;
 }
-
+#cotizar:hover{
+    color: #40689B;
+}
 
 #package:hover{
   color: #40689B;
