@@ -47,7 +47,9 @@ function getObject(objects, pk){
 
 function formatAmort(items){
     for(i = 0; i < items.length; i++){
+        // console.log(items[i]);
         for(j = 0; j < items[i].length; j++){
+            // console.log(items[i][j])
             if(j != 0){
                 items[i][j] = items[i][j].toFixed(2);
             }

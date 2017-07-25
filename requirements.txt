@@ -12,3 +12,6 @@ PyJWT>=1.4.2
 PyMySQL>=0.7.10
 Pillow>=4.1.1
 psycopg2
+xhtml2pdf
+pypdf
+html5lib==1.0b8
