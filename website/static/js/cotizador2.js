@@ -92,7 +92,7 @@ function getTypes(cars){
 }
 
 function isResponsive() {
-    return $(window).width() < 960;
+    return $(window).width() < 960/*960*/;
 }
 
 $(document).ready(function() {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     var hitch;
 
     // Variables circle brands
-    var brand_items = 4;
+    var brand_items = 5;
     var brand_deg = (360 * (Math.PI / 180)) / brand_items;
     var brand_radius = 110;
 
@@ -211,6 +211,25 @@ $(document).ready(function() {
     $('#people').hide();
     $('#hitch').hide();
     $('#times').hide();
+
+
+
+
+
+    //TODO: PROBAR PARA EL DIMENSIONADO DEL CIRCULO OPTIONS RESPONSIVE.
+    var width_option = $('#option').width();
+    if(isResponsive()){
+        $('#options').css({
+            'width': width_option  - 10 +'px',
+            'height': width_option - 10  + 'px'
+        });
+
+        $('#option div.options-button').css({
+            'width': ((width_option / 3) * 2)  + 'px',
+            'height': ((width_option / 3) * 2)  + 'px',
+            'margin': ((width_option / 3) * -1)  + 'px 0 0 ' + ((width_option / 3) * -1) + 'px'
+        });
+    }
 
 
     // // Prepare and adjust package circle
@@ -375,10 +394,10 @@ $(document).ready(function() {
                 $("a.model-element").each(function(index) {
                     $(this).on("click", function(){
 
-                        if (isResponsive()) {
-                            $( "#mySidenav").show();
-                            openNav();
-                        }
+                        // alert($(window).width())
+
+
+
 
                         $("#option-button").show();
                         // car_id
@@ -402,7 +421,10 @@ $(document).ready(function() {
                         $("#mySidenav").append(cars_html_resp);
                         $("#mySidenav").append('<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>');
 
-
+                        if (isResponsive()) {
+                            $("#mySidenav").show();
+                            openNav();
+                        }
 
                         if(!isResponsive()){$('#option-button #cars').hide().html(cars_html).fadeIn('slow');}
                         $("h2.car-name").each(function(index){
@@ -546,8 +568,9 @@ $(document).ready(function() {
         // $('#rpackage').hide()
         // $('#rtime').hide()
 
-        $("#quote-info").show();
-
+        if (!isResponsive()) {
+            $("#quote-info").show();
+        }
         $("#resume-container").append('<span id="rbrand"></span><br>');
         $('#rbrand').html(brand_name);
 
@@ -560,6 +583,7 @@ $(document).ready(function() {
 
     $('#opt-next').click(function(){
         var packages_html = "";
+        var packages_html_resp = "";
         console.log(cars)
         for(i=0; i < cars.length; i++){
             if(cars[i].pk == car_id){
@@ -567,19 +591,31 @@ $(document).ready(function() {
                 for(j=0; j < cars[i]['fields']['options'].length; j++){
                     if(cars[i]['fields']['options'][j]['model'] == '2017'){
                         packages_html += '<p style="cursor: pointer" value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'
+                        packages_html_resp += '<li><p style="cursor: pointer" value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p></li>'
                     }else if(cars[i]['fields']['options'][j]['model'] == '2016'){
                         packages_html += '<p style="cursor: pointer value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'
+                        packages_html_resp += '<li><p style="cursor: pointer value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'
                     }else if(cars[i]['fields']['options'][j]['model'] == '2015'){
-                        packages_html += '<p style="cursor: pointer value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p><br>'
+                        packages_html += '<p style="cursor: pointer value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p></li>'
+                        packages_html_resp += '<li><p style="cursor: pointer value="'+cars[i]['fields']['options'][j]['package']+'" id="package" description="'+cars[i]['fields']['options'][j]['description']+'" id-package="'+cars[i]['fields']['options'][j]['id']+'" price="'+cars[i]['fields']['options'][j]['price']+'" class="package font-mr font-gray">'+cars[i]['fields']['options'][j]['package']+'</p></li>'
                     }
                 }
             }
         }
 
+        if (isResponsive()) {
+            $("#mySidenav").empty();
+            $("#mySidenav").append(packages_html_resp);
+            $("#mySidenav").append('<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>');
+
+            $( "#mySidenav").show();
+            openNav();
+        }else{
+            $('#packages div').after(packages_html);
+        }
 
 
 
-        $('#packages div').after(packages_html);
         $(".package").click(function(){
             $("#option-detail").html("");
             $("#option-detail").hide();
@@ -593,6 +629,22 @@ $(document).ready(function() {
 
             $("#resume-container").append('Paquete <span id="rpackage"></span><br>');
             $('#rpackage').html(package);
+
+
+
+            var products_html = '<p value="1" style="cursor: pointer" value-name="Crédito Automotriz" id="product" class="product font-mr font-gray">Crédito Automotriz</p><br>';
+            var products_html_resp = '<li><p value="1" style="cursor: pointer" value-name="Crédito Automotriz" id="product" class="product font-mr font-gray">Crédito Automotriz</p></li>';
+
+            if (isResponsive()) {
+                $("#mySidenav").empty();
+                $("#mySidenav").append(products_html_resp);
+                $("#mySidenav").append('<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>');
+
+                $( "#mySidenav").show();
+                // openNav();
+            }else{
+                $('#products div').after(products_html);
+            }
 
         });
         $(".package").mouseout(function() {
@@ -613,6 +665,9 @@ $(document).ready(function() {
 
     });
 
+
+
+
     $(".product").click(function(){
         product = $(this).attr('value');
         product_name = $(this).attr('value-name');
@@ -628,6 +683,29 @@ $(document).ready(function() {
 
     });
 
+
+
+    var person_html = '<p value="1" style="cursor: pointer" value-name="Persona física" id="person" class="person font-mr font-gray">Persona Física</p> <br> \
+                       <p value="2" style="cursor: pointer" value-name="Persona Física con Actividad Empresarial" id="person" class="person font-mr font-gray">Persona Física con Actividad Empresarial</p> <br>\
+                       <p value="3" style="cursor: pointer" value-name="Persona Moral" id="person" class="person font-mr font-gray">Persona Moral</p>';
+
+
+    var person_html_resp = '<li><p value="1" style="cursor: pointer" value-name="Persona física" id="person" class="person font-mr font-gray">Persona Física</p> </li> \
+                            <li><p value="2" style="cursor: pointer" value-name="Persona Física con Actividad Empresarial" id="person" class="person font-mr font-gray">Persona Física con Actividad Empresarial</p> </li>\
+                            <li><p value="3" style="cursor: pointer" value-name="Persona Moral" id="person" class="person font-mr font-gray">Persona Moral</p></li>';
+
+
+    if (isResponsive()) {
+        $("#mySidenav").empty();
+        $("#mySidenav").append(person_html_resp);
+        $("#mySidenav").append('<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>');
+
+        // openNav();
+    }else{
+        $('#people div').after(person_html);
+    }
+
+
     $(".person").click(function(){
         console.log(package_price);
         $("#amount").val(package_price * 0.15);
@@ -642,6 +720,38 @@ $(document).ready(function() {
         $("#resume-container").append('<span id="rpeople"></span><br>Plan IN Credit<br>');
         $('#rpeople').html(person_name);
     });
+
+
+
+    var porcentage_html = '<p class="font-mr font-gray">Elige el porcentaje</p> \
+                            <select name="porcentage" id="porcentage"> \
+                                <option value="15">15 %</option> \
+                                <option value="25">25 %</option> \
+                                <option value="35">35 %</option> \
+                                <option value="45">45 %</option> \
+                                <option value="55">55 %</option> \
+                            </select> \
+                            <hr style="border-top: 3px solid #5E5E5E; width:4em; margin-top: 2px; margin-bottom: 5px;"> \
+                            <p class="font-mr font-gray">ó <br> Determina el monto</p> \
+                            <label><span class="font-mr font-gray" style="font-weight: 100; text-align:center">Monto: </span><input type="text" name="amount" id="amount" value="50,000"></label> \
+                            <center><p id="hitch-next" class="font-rr" style="cursor:pointer;border-top: 1px solid #40689B; border-bottom: 1px solid #40689B; color: #40689B; margin-top: 0.5em; width: 5em;">Siguiente</p></center>';
+
+
+    var porcentage_html_resp = '';
+
+
+    if (isResponsive()) {
+        $("#mySidenav").empty();
+        $("#mySidenav").append(porcentage_html);
+        $("#mySidenav").append('<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>');
+
+        // $( "#mySidenav").show();
+        // openNav();
+    }else{
+        $('#hitch div').after(porcentage_html);
+    }
+
+
 
     $("#porcentage").change(function(){
         $("#amount").val(package_price * ($(this).val() / 100));
@@ -664,6 +774,30 @@ $(document).ready(function() {
         $("#quote-info").hide();
         hitch = $('#porcentage').val();
     });
+
+
+    var time_html = '<p value="12" style="cursor: pointer" value-name="12 meses" id="time" class="time font-mr font-gray">12 meses</p><br> \
+                                <p value="24" style="cursor: pointer" value-name="24 meses" id="time" class="time font-mr font-gray">24 meses</p><br> \
+                                <p value="36" style="cursor: pointer" value-name="36 meses" id="time" class="time font-mr font-gray">36 meses</p><br> \
+                                <p value="48" style="cursor: pointer" value-name="48 meses" id="time" class="time font-mr font-gray">48 meses</p>';
+
+
+    var time_html_resp = '<li><p value="12" style="cursor: pointer" value-name="12 meses" id="time" class="time font-mr font-gray">12 meses</p></li> \
+                                <li><p value="24" style="cursor: pointer" value-name="24 meses" id="time" class="time font-mr font-gray">24 meses</p></li> \
+                                <li><p value="36" style="cursor: pointer" value-name="36 meses" id="time" class="time font-mr font-gray">36 meses</p></li> \
+                                <li><p value="48" style="cursor: pointer" value-name="48 meses" id="time" class="time font-mr font-gray">48 meses</p></li>';
+
+
+    if (isResponsive()) {
+        $("#mySidenav").empty();
+        $("#mySidenav").append(time_html_resp);
+        $("#mySidenav").append('<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>');
+
+        // $( "#mySidenav").show();
+        // openNav();
+    }else{
+        $('#times div').after(time_html);
+    }
 
 
     $(".time").click(function(){
